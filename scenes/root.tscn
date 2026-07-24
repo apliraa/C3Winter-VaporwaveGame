@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=7 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Texture2D" uid="uid://c3yarbxwrru5t" path="res://assets/icon.svg" id="1_j5px3"]
+[ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="Texture2D" uid="uid://bjce1owqchtki" path="res://assets/images.jpeg" id="1_twpsu"]
 [ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/Arquivo_Aberto_Hover.png" id="2_lrqlo"]
+[ext_resource type="Script" uid="uid://b3velykf3wh1l" path="res://scripts/Arquivos.cs" id="3_jh1ax"]
 [ext_resource type="PackedScene" uid="uid://7ukcnxpr7lhx" path="res://scenes/newWindow.tscn" id="4_sqa0i"]
 
 [node name="root" type="Control"]
@@ -14,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_kycxp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -43,6 +46,8 @@ layout_mode = 2
 icon = ExtResource("2_lrqlo")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("3_jh1ax")
+windowTeste = ExtResource("4_sqa0i")
 
 [node name="email" type="Button" parent="GridContainer"]
 layout_mode = 2
@@ -76,20 +81,4 @@ icon = ExtResource("1_j5px3")
 layout_mode = 2
 icon = ExtResource("1_j5px3")
 
-[node name="Button10" type="Button" parent="GridContainer"]
-layout_mode = 2
-icon = ExtResource("1_j5px3")
-
-[node name="NewWindow" parent="." instance=ExtResource("4_sqa0i")]
-z_index = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.037326388
-anchor_top = -0.06635802
-anchor_right = 1.0373263
-anchor_bottom = 0.93364197
-offset_left = 275.0
-offset_top = 91.0
-offset_right = -71.0
-offset_bottom = -104.0
-metadata/_edit_use_anchors_ = true
+[connection signal="pressed" from="GridContainer/arquivos" to="GridContainer/arquivos" method="_on_pressed"]

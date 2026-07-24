@@ -1,36 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://7ukcnxpr7lhx"]
+[gd_scene load_steps=5 format=3 uid="uid://7ukcnxpr7lhx"]
 
+[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_58327"]
 [ext_resource type="Texture2D" uid="uid://c3yarbxwrru5t" path="res://assets/icon.svg" id="1_wbbkl"]
 [ext_resource type="Texture2D" uid="uid://bj7x0csvj86nq" path="res://assets/simple_background.webp" id="2_1lk4y"]
+[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="3_b6ycw"]
 
-[node name="NewWindow" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CloseButton" type="Button" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.9392361
-anchor_right = 0.9982639
-anchor_bottom = 0.071357995
-offset_right = 68.0
-offset_bottom = 89.76002
-grow_horizontal = 0
-scale = Vector2(0.5, 0.33999985)
-icon = ExtResource("1_wbbkl")
-metadata/_edit_use_anchors_ = true
+[node name="NewWindow" type="CanvasLayer"]
+script = ExtResource("1_58327")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+z_index = -1
+anchors_preset = -1
+anchor_left = 0.35546875
+anchor_top = 0.175
+anchor_right = 0.9110243
+anchor_bottom = 0.73055553
+offset_top = -6.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1lk4y")
 metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="Button" parent="."]
+z_index = 1
+anchors_preset = -1
+offset_left = 1029.0
+offset_top = 127.0
+offset_right = 1165.0
+offset_bottom = 263.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("1_wbbkl")
+script = ExtResource("3_b6ycw")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
