@@ -11,9 +11,20 @@ config_version=5
 [application]
 
 config/name="VaporwaveGame"
-config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://bwpcntty6uqeh"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/icon="res://assets/icon.svg"
+
+[display]
+
+window/size/mode=3
+window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="VaporwaveGame"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
