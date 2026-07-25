@@ -9,6 +9,12 @@ public partial class NewWindow : Control
 
 	private bool draging;
 
+    public override void _Ready()
+    {
+        SignalBus.Instance.WindowFocused += Unfocus;  
+    }
+
+
 	public override void _Process(double delta)
 	{
 		if (draging)
@@ -37,5 +43,16 @@ public partial class NewWindow : Control
 		draging = false;
 		initMousePosit = Vector2.Zero;
 	}
+
+	public void _on_focus_entered()
+	{
+		SignalBus.Instance.EmitSignal(SignalBus.SignalName.WindowFocused);
+		ZIndex = 10;
+	}
+
+	private void Unfocus()
+	{
+		if (!HasFocus()) ZIndex = 5;
+	} 
 	
 }

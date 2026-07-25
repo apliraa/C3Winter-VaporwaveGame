@@ -19,10 +19,11 @@ public partial class Arquivos : TextureButton
 		{
 			Node window = windowTeste.Instantiate();
 			Owner.AddChild(window);
+		} else
+		{
+			SignalBus.Instance.EmitSignal(SignalBus.SignalName.AppSelected);
 		}
 
-		SignalBus.Instance.EmitSignal(SignalBus.SignalName.AppSelected);
-		
 		selected = !selected;
 	}
 
