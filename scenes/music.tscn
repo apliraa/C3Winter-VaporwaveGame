@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://q4jw58ke7aev"]
+
+[ext_resource type="AudioStream" uid="uid://da85xnanf2mm" path="res://assets/music/main-music.ogg" id="1_ibx2e"]
+[ext_resource type="AudioStream" uid="uid://brfhpco5ss6m4" path="res://assets/music/reset-music.ogg" id="2_qnihg"]
+[ext_resource type="Script" uid="uid://df8qhocf3poxn" path="res://scripts/MusicManager.cs" id="3_qnihg"]
+
+[node name="music" type="Node2D"]
+
+[node name="main" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_ibx2e")
+attenuation = 1000000.0
+panning_strength = 0.0
+
+[node name="reset" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qnihg")
+attenuation = 1000000.0
+panning_strength = 0.0
+script = ExtResource("3_qnihg")

@@ -3,14 +3,13 @@ using System;
 
 public partial class Root : Control
 {
-	//logica de reinicio do pc
-	
+	[Export] private int time;
+	[Export] private Desktop desktop;
 	
 	public override void _Ready()
 	{
+		desktop.StartCorruption(time);
 	}
 
-	public override void _Process(double delta)
-	{
-	}
+
 }

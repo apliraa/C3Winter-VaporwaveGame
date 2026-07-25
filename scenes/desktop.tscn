@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://br3nunl447drb"]
+
+[ext_resource type="Texture2D" uid="uid://bkp2iersyv1rq" path="res://assets/screens/desktop/moldura computador.png" id="1_81rff"]
+[ext_resource type="Shader" uid="uid://f0g6n5pw1v4c" path="res://shaders/melt.gdshader" id="2_ox5hf"]
+[ext_resource type="Texture2D" uid="uid://478ew3mj4qlm" path="res://assets/screens/desktop/tela computador.png" id="3_dcrhm"]
+[ext_resource type="Script" uid="uid://4mnejdg4o23n" path="res://scripts/Desktop.cs" id="4_ox5hf"]
+[ext_resource type="Shader" uid="uid://sv3epdyrd7ho" path="res://shaders/color_shift.gdshader" id="5_dcrhm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ajoh"]
+shader = ExtResource("2_ox5hf")
+shader_parameter/progress = 0.0
+shader_parameter/meltiness = 1.2870000611325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dcrhm"]
+shader = ExtResource("5_dcrhm")
+shader_parameter/use_grayscale = false
+shader_parameter/shift_color = Color(1, 1, 1, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6ajoh"]
+
+[node name="desktop" type="Control" node_paths=PackedStringArray("wallpaper", "gradient")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ox5hf")
+wallpaper = NodePath("wallpaper")
+gradient = NodePath("wallpaper/mask")
+
+[node name="moldura" type="TextureRect" parent="."]
+z_index = 123
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 725.0
+texture = ExtResource("1_81rff")
+
+[node name="wallpaper" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_6ajoh")
+layout_mode = 0
+offset_left = 138.0
+offset_top = 78.0
+offset_right = 1142.0
+offset_bottom = 644.0
+texture = ExtResource("3_dcrhm")
+
+[node name="mask" type="Sprite2D" parent="wallpaper"]
+material = SubResource("ShaderMaterial_dcrhm")
+position = Vector2(502.00006, 282.5)
+scale = Vector2(1004.00006, 564.99994)
+texture = SubResource("PlaceholderTexture2D_6ajoh")
