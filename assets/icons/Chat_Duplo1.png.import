@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cecihv6gu8r52"
-path="res://.godot/imported/Email_Fechado2.png-f8c93ad2f4f17f08f04b6f189e2a9dd4.ctex"
+uid="uid://lgo870pi6g0x"
+path="res://.godot/imported/Chat_Duplo1.png-22d58b22eab77f0eca42f8a9eac75da6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Email_Fechado2.png"
-dest_files=["res://.godot/imported/Email_Fechado2.png-f8c93ad2f4f17f08f04b6f189e2a9dd4.ctex"]
+source_file="res://assets/icons/Chat_Duplo1.png"
+dest_files=["res://.godot/imported/Chat_Duplo1.png-22d58b22eab77f0eca42f8a9eac75da6.ctex"]
 
 [params]
 

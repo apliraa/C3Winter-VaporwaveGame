@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://0enep0e8yvnc"]
 
-[ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/Arquivo_Aberto_Hover.png" id="1_365y4"]
+[ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/icons/Arquivo_Aberto_Hover.png" id="1_365y4"]
 [ext_resource type="Script" uid="uid://b3velykf3wh1l" path="res://scripts/Arquivos.cs" id="2_i6og7"]
 [ext_resource type="PackedScene" uid="uid://7ukcnxpr7lhx" path="res://scenes/newWindow.tscn" id="3_mku72"]
 

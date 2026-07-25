@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cks1tyw4fc7yu"
-path="res://.godot/imported/Arquivo_Aberto_Hover.png-507eb8abfa3b48280b5b2169385cc218.ctex"
+uid="uid://cecihv6gu8r52"
+path="res://.godot/imported/Email_Fechado2.png-ff082a02b82f7e36284ce55b908c6ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Arquivo_Aberto_Hover.png"
-dest_files=["res://.godot/imported/Arquivo_Aberto_Hover.png-507eb8abfa3b48280b5b2169385cc218.ctex"]
+source_file="res://assets/icons/Email_Fechado2.png"
+dest_files=["res://.godot/imported/Email_Fechado2.png-ff082a02b82f7e36284ce55b908c6ff5.ctex"]
 
 [params]
 

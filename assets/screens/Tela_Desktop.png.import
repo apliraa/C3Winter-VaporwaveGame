@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brfaaygdotphk"
-path="res://.godot/imported/U_Navegador1.png-bf0ff9b3e7cd0dd8e3a2f39757444734.ctex"
+uid="uid://dobqu1vyixhho"
+path="res://.godot/imported/Tela_Desktop.png-a49409bdc04842c2b41ab6595fbb846e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/U_Navegador1.png"
-dest_files=["res://.godot/imported/U_Navegador1.png-bf0ff9b3e7cd0dd8e3a2f39757444734.ctex"]
+source_file="res://assets/screens/Tela_Desktop.png"
+dest_files=["res://.godot/imported/Tela_Desktop.png-a49409bdc04842c2b41ab6595fbb846e.ctex"]
 
 [params]
 

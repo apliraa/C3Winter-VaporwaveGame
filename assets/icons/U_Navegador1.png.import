@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwaeee0x21rs1"
-path="res://.godot/imported/Botão_Fechar.png-a708ed09135ba7eaf979f316e139d56f.ctex"
+uid="uid://brfaaygdotphk"
+path="res://.godot/imported/U_Navegador1.png-02fd55c77ff73482c072e6c502596f52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Botão_Fechar.png"
-dest_files=["res://.godot/imported/Botão_Fechar.png-a708ed09135ba7eaf979f316e139d56f.ctex"]
+source_file="res://assets/icons/U_Navegador1.png"
+dest_files=["res://.godot/imported/U_Navegador1.png-02fd55c77ff73482c072e6c502596f52.ctex"]
 
 [params]
 

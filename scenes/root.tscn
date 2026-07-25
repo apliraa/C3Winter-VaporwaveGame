@@ -1,13 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=14 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
-[ext_resource type="Texture2D" uid="uid://dobqu1vyixhho" path="res://assets/Tela_Desktop.png" id="2_j287u"]
+[ext_resource type="Texture2D" uid="uid://dobqu1vyixhho" path="res://assets/screens/Tela_Desktop.png" id="2_j287u"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
-[ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/Chat_Duplo1.png" id="4_3hfy5"]
-[ext_resource type="Texture2D" uid="uid://brfaaygdotphk" path="res://assets/U_Navegador1.png" id="4_5sfjl"]
-[ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/Email_Fechado2.png" id="5_3hfy5"]
-[ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/Bloco_Notas1.png" id="6_7pvxh"]
-[ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/Lixeira_Vazia1.png" id="7_y3xxt"]
+[ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
+[ext_resource type="Texture2D" uid="uid://brfaaygdotphk" path="res://assets/icons/U_Navegador1.png" id="4_5sfjl"]
+[ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/icons/Email_Fechado2.png" id="5_3hfy5"]
+[ext_resource type="PackedScene" uid="uid://b2v4nts1sxtce" path="res://scenes/MSNWindow.tscn" id="5_7pvxh"]
+[ext_resource type="PackedScene" uid="uid://8meh1o8aug5x" path="res://scenes/trashWindow.tscn" id="5_y3xxt"]
+[ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/icons/Bloco_Notas1.png" id="6_7pvxh"]
+[ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
+[ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
+[ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
+[ext_resource type="PackedScene" uid="uid://db0hyw3xeksj3" path="res://scenes/notesWindow.tscn" id="13_vgks2"]
 
 [node name="root" type="Control"]
 layout_mode = 3
@@ -30,16 +35,28 @@ grow_vertical = 2
 texture = ExtResource("2_j287u")
 expand_mode = 2
 
+[node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 521.0
+offset_right = 1117.0
+offset_bottom = 581.0
+focus_mode = 0
+texture_normal = ExtResource("7_y3xxt")
+stretch_mode = 5
+windowTeste = ExtResource("5_y3xxt")
+
 [node name="GridContainer" type="GridContainer" parent="."]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 139.0
-offset_top = 77.0
-offset_right = -136.0
-offset_bottom = -117.0
+offset_left = 173.0
+offset_top = 117.0
+offset_right = -233.15039
+offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 15
@@ -49,29 +66,31 @@ columns = 3
 [node name="MSN" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("4_3hfy5")
 stretch_mode = 5
+windowTeste = ExtResource("5_7pvxh")
 
 [node name="NAV" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("4_5sfjl")
 stretch_mode = 5
+windowTeste = ExtResource("9_l5cgh")
 
 [node name="EMAIL" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("5_3hfy5")
 stretch_mode = 5
+windowTeste = ExtResource("8_7pvxh")
 
 [node name="NOTAS" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("6_7pvxh")
 stretch_mode = 5
-
-[node name="LIXO" parent="GridContainer" instance=ExtResource("3_lrqlo")]
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
-texture_normal = ExtResource("7_y3xxt")
-stretch_mode = 5
+windowTeste = ExtResource("13_vgks2")

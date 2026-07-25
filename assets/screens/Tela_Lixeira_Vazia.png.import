@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjce1owqchtki"
-path="res://.godot/imported/images.jpeg-48225cb2313b397b445cdb5bccc8b15e.ctex"
+uid="uid://bphawhnsanfng"
+path="res://.godot/imported/Tela_Lixeira_Vazia.png-d7f7cada02263e41d5e5e10ea29e7711.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images.jpeg"
-dest_files=["res://.godot/imported/images.jpeg-48225cb2313b397b445cdb5bccc8b15e.ctex"]
+source_file="res://assets/screens/Tela_Lixeira_Vazia.png"
+dest_files=["res://.godot/imported/Tela_Lixeira_Vazia.png-d7f7cada02263e41d5e5e10ea29e7711.ctex"]
 
 [params]
 

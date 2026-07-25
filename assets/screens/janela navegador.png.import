@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fiym8jmti1j"
-path="res://.godot/imported/Tela_BlocodeNotas.png-1dbc736469dd89ab4faac23af709b339.ctex"
+uid="uid://bt37qqqyb0dgl"
+path="res://.godot/imported/janela navegador.png-c93183bd1305eeca1bc828f3f05e00d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tela_BlocodeNotas.png"
-dest_files=["res://.godot/imported/Tela_BlocodeNotas.png-1dbc736469dd89ab4faac23af709b339.ctex"]
+source_file="res://assets/screens/janela navegador.png"
+dest_files=["res://.godot/imported/janela navegador.png-c93183bd1305eeca1bc828f3f05e00d2.ctex"]
 
 [params]
 

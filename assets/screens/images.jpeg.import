@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crjhtosd0f7pp"
-path="res://.godot/imported/Lixeira_Vazia1.png-185e16d87b126fdaa2bfff5ff3eca661.ctex"
+uid="uid://bjce1owqchtki"
+path="res://.godot/imported/images.jpeg-061f498c3283d3604dd45102e7421b4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Lixeira_Vazia1.png"
-dest_files=["res://.godot/imported/Lixeira_Vazia1.png-185e16d87b126fdaa2bfff5ff3eca661.ctex"]
+source_file="res://assets/screens/images.jpeg"
+dest_files=["res://.godot/imported/images.jpeg-061f498c3283d3604dd45102e7421b4a.ctex"]
 
 [params]
 

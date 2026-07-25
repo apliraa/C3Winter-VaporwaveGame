@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://cphspbwwuvjig"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_7b8rp"]
-[ext_resource type="Texture2D" uid="uid://bj7x0csvj86nq" path="res://assets/simple_background.webp" id="2_0ve34"]
-[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/Botão_Fechar.png" id="3_7b8rp"]
+[ext_resource type="Texture2D" uid="uid://dmy8rvnqjjkoh" path="res://assets/screens/Tela_Email.png" id="2_5mh1g"]
+[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_7b8rp"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_2v5ra"]
 
-[node name="NewWindow" type="Control"]
+[node name="emailWindow" type="Control"]
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
@@ -26,13 +26,16 @@ offset_right = 709.0
 offset_bottom = 403.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_0ve34")
+texture = ExtResource("2_5mh1g")
+expand_mode = 2
 
 [node name="bar" type="Button" parent="."]
 layout_mode = 0
-offset_right = 710.0
+offset_right = 705.0
 offset_bottom = 28.0
+focus_mode = 0
 keep_pressed_outside = true
+flat = true
 
 [node name="CloseButton" type="Button" parent="."]
 z_index = 1
@@ -40,14 +43,15 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 677.00006
-offset_top = -2.0
-offset_right = 717.00006
-offset_bottom = 38.0
+offset_left = 670.00006
+offset_top = 2.9999995
+offset_right = 710.00006
+offset_bottom = 43.0
 grow_horizontal = 0
 scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 8
 size_flags_vertical = 8
+focus_mode = 0
 icon = ExtResource("3_7b8rp")
 flat = true
 icon_alignment = 1

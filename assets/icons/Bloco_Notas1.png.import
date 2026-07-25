@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7x0csvj86nq"
-path="res://.godot/imported/simple_background.webp-72b02aa707b83fffd12b714868184986.ctex"
+uid="uid://cfrky7ci84o0o"
+path="res://.godot/imported/Bloco_Notas1.png-22560b1e1e831851239e004f9f77dea0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/simple_background.webp"
-dest_files=["res://.godot/imported/simple_background.webp-72b02aa707b83fffd12b714868184986.ctex"]
+source_file="res://assets/icons/Bloco_Notas1.png"
+dest_files=["res://.godot/imported/Bloco_Notas1.png-22560b1e1e831851239e004f9f77dea0.ctex"]
 
 [params]
 

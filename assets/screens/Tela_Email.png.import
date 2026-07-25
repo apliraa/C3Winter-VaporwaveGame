@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfrky7ci84o0o"
-path="res://.godot/imported/Bloco_Notas1.png-dac181e32e29c2e4528815ddbcf3c281.ctex"
+uid="uid://dmy8rvnqjjkoh"
+path="res://.godot/imported/Tela_Email.png-4faf78487493fa9a2feaad1d036ee6ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bloco_Notas1.png"
-dest_files=["res://.godot/imported/Bloco_Notas1.png-dac181e32e29c2e4528815ddbcf3c281.ctex"]
+source_file="res://assets/screens/Tela_Email.png"
+dest_files=["res://.godot/imported/Tela_Email.png-4faf78487493fa9a2feaad1d036ee6ea.ctex"]
 
 [params]
 

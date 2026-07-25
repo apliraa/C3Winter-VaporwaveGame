@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dobqu1vyixhho"
-path="res://.godot/imported/Tela_Desktop.png-e3fd56087d04c4f5765ca8f24b3e0bb0.ctex"
+uid="uid://bqs6a7xwowex8"
+path="res://.godot/imported/Ligação1.png-7aac60fa586937d98804e5136095faa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tela_Desktop.png"
-dest_files=["res://.godot/imported/Tela_Desktop.png-e3fd56087d04c4f5765ca8f24b3e0bb0.ctex"]
+source_file="res://assets/screens/Ligação1.png"
+dest_files=["res://.godot/imported/Ligação1.png-7aac60fa586937d98804e5136095faa6.ctex"]
 
 [params]
 

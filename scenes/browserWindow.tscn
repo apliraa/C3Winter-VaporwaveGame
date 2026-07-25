@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2v4nts1sxtce"]
+[gd_scene load_steps=5 format=3 uid="uid://slgdo8gveesj"]
 
-[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_gfhfj"]
-[ext_resource type="Texture2D" uid="uid://clq487idgox4a" path="res://assets/screens/janela chat vazia.png" id="2_gfhfj"]
-[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_p8mrx"]
-[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_o33ma"]
+[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_mtxko"]
+[ext_resource type="Texture2D" uid="uid://bt37qqqyb0dgl" path="res://assets/screens/janela navegador.png" id="2_mtxko"]
+[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_rwb0w"]
+[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_yfmtj"]
 
-[node name="MSNWindow" type="Control"]
+[node name="browserWindow" type="Control"]
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
@@ -13,7 +13,7 @@ offset_left = 500.0
 offset_top = 164.0
 offset_right = 500.0
 offset_bottom = 164.0
-script = ExtResource("1_gfhfj")
+script = ExtResource("1_mtxko")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -26,7 +26,7 @@ offset_right = 709.0
 offset_bottom = 403.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_gfhfj")
+texture = ExtResource("2_mtxko")
 expand_mode = 2
 
 [node name="bar" type="Button" parent="."]
@@ -40,18 +40,18 @@ flat = true
 [node name="CloseButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 662.0
+offset_left = 663.0
 offset_top = 5.9999995
-offset_right = 702.0
+offset_right = 703.0
 offset_bottom = 46.0
 scale = Vector2(0.7, 0.7)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 focus_mode = 0
-icon = ExtResource("3_p8mrx")
+icon = ExtResource("3_rwb0w")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_o33ma")
+script = ExtResource("4_yfmtj")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
