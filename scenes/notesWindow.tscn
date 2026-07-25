@@ -1,9 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://db0hyw3xeksj3"]
+[gd_scene load_steps=15 format=3 uid="uid://db0hyw3xeksj3"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_q768o"]
 [ext_resource type="Texture2D" uid="uid://d3fiym8jmti1j" path="res://assets/screens/Tela_BlocodeNotas.png" id="2_q768o"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_fh4ba"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_20xb2"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="5_bn1fd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bn1fd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tl55a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvyy5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfh0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s08b1"]
+
+[sub_resource type="Theme" id="Theme_mvrfa"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_bn1fd")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_tl55a")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_xvyy5")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_vfh0j")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_s08b1")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh4ba"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20xb2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tambi"]
 
 [node name="notesWindow" type="Control"]
 z_index = 6
@@ -52,6 +76,20 @@ icon = ExtResource("3_fh4ba")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_20xb2")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 674.0
+offset_bottom = 402.0
+theme = SubResource("Theme_mvrfa")
+theme_override_colors/caret_color = Color(0.14961773, 0.002651523, 0.24577913, 1)
+theme_override_colors/font_color = Color(0.25738078, 0.0004323826, 0.37767172, 1)
+theme_override_fonts/font = ExtResource("5_bn1fd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fh4ba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_20xb2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_tambi")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]

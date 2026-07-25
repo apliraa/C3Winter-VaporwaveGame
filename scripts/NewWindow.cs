@@ -9,10 +9,10 @@ public partial class NewWindow : Control
 
 	private bool draging;
 
-    public override void _Ready()
-    {
-        SignalBus.Instance.WindowFocused += Unfocus;  
-    }
+	public override void _Ready()
+	{
+		SignalBus.Instance.WindowFocused += Unfocus;  
+	}
 
 
 	public override void _Process(double delta)

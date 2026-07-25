@@ -15,11 +15,30 @@ script = ExtResource("2_wb1d8")
 
 [node name="LineEdit" type="LineEdit" parent="Window"]
 offset_left = 75.0
-offset_top = 96.0
+offset_top = 141.0
 offset_right = 221.0
-offset_bottom = 159.0
+offset_bottom = 204.0
 placeholder_text = "Digite o texto..."
 clear_button_enabled = true
+
+[node name="Panel" type="Panel" parent="Window"]
+custom_minimum_size = Vector2(200, 40)
+offset_left = 52.0
+offset_top = 34.0
+offset_right = 252.0
+offset_bottom = 83.0
+
+[node name="Label" type="RichTextLabel" parent="Window/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = -0.03846154
+anchor_right = 0.02
+anchor_bottom = -0.03846154
+offset_left = -4.0
+offset_top = 1.538452
+offset_right = 196.0
+offset_bottom = 51.230774
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="close_requested" from="Window" to="." method="OnWindowCloseRequested"]

@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://slgdo8gveesj"]
+[gd_scene load_steps=10 format=3 uid="uid://slgdo8gveesj"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_mtxko"]
 [ext_resource type="Texture2D" uid="uid://bt37qqqyb0dgl" path="res://assets/screens/janela navegador.png" id="2_mtxko"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_rwb0w"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_yfmtj"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="5_r2xw7"]
+[ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="6_nuo0f"]
+[ext_resource type="Texture2D" uid="uid://hpqwl374s2w3" path="res://assets/icons/favoritos.png" id="7_hl1k7"]
+[ext_resource type="PackedScene" uid="uid://1txmxb6tsbbr" path="res://scenes/browser_hint.tscn" id="8_nuo0f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwb0w"]
+bg_color = Color(0.9372549, 0.92941177, 0.9647059, 1)
+border_color = Color(0.6862745, 0.5764706, 0.8784314, 0)
 
 [node name="browserWindow" type="Control"]
 z_index = 6
@@ -52,6 +60,38 @@ icon = ExtResource("3_rwb0w")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_yfmtj")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 52.999977
+offset_top = 246.99998
+offset_right = 871.57135
+offset_bottom = 281.2857
+scale = Vector2(0.7, 0.7)
+focus_mode = 1
+theme_override_colors/font_color = Color(0.26551187, 0.0097870035, 0.40223336, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0.16546407, 0.0003609325, 0.34639162, 1)
+theme_override_colors/clear_button_color = Color(1, 0, 0.68235296, 1)
+theme_override_fonts/font = ExtResource("5_r2xw7")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_rwb0w")
+placeholder_text = "Pesquise Por..."
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="Favoritos" parent="." instance=ExtResource("6_nuo0f")]
+z_index = 1
+layout_mode = 0
+offset_left = 598.0
+offset_top = 41.0
+offset_right = 838.0
+offset_bottom = 93.0
+scale = Vector2(0.3, 0.3)
+focus_mode = 0
+texture_normal = ExtResource("7_hl1k7")
+stretch_mode = 5
+windowTeste = ExtResource("8_nuo0f")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
