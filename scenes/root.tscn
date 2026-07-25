@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
-[ext_resource type="Texture2D" uid="uid://dobqu1vyixhho" path="res://assets/screens/Tela_Desktop.png" id="2_j287u"]
+[ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_l5cgh"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
+[ext_resource type="Texture2D" uid="uid://g7p6gnrdgrtm" path="res://assets/screens/tela computador.png" id="3_vgks2"]
 [ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
-[ext_resource type="Texture2D" uid="uid://brfaaygdotphk" path="res://assets/icons/U_Navegador1.png" id="4_5sfjl"]
 [ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/icons/Email_Fechado2.png" id="5_3hfy5"]
 [ext_resource type="PackedScene" uid="uid://b2v4nts1sxtce" path="res://scenes/MSNWindow.tscn" id="5_7pvxh"]
 [ext_resource type="PackedScene" uid="uid://8meh1o8aug5x" path="res://scenes/trashWindow.tscn" id="5_y3xxt"]
@@ -25,17 +25,25 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_j287u")
-expand_mode = 2
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_top = -5.0
+offset_right = 1281.0
+offset_bottom = 720.0
+texture = ExtResource("2_l5cgh")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 122.261475
+offset_top = 65.0
+offset_right = 1151.0953
+offset_bottom = 645.0
+texture = ExtResource("3_vgks2")
 
 [node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
+z_index = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 1057.0
@@ -47,49 +55,52 @@ texture_normal = ExtResource("7_y3xxt")
 stretch_mode = 5
 windowTeste = ExtResource("5_y3xxt")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
 z_index = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 173.0
-offset_top = 117.0
-offset_right = -233.15039
-offset_bottom = -161.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 15
-theme_override_constants/v_separation = 15
-columns = 3
-
-[node name="MSN" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
+layout_mode = 0
+offset_left = 170.0
+offset_top = 105.0
+offset_right = 230.0
+offset_bottom = 165.0
 focus_mode = 0
 texture_normal = ExtResource("4_3hfy5")
 stretch_mode = 5
 windowTeste = ExtResource("5_7pvxh")
 
-[node name="NAV" parent="GridContainer" instance=ExtResource("3_lrqlo")]
+[node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
+z_index = 1
 custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
+layout_mode = 0
+offset_left = 250.0
+offset_top = 105.0
+offset_right = 310.0
+offset_bottom = 165.0
 focus_mode = 0
-texture_normal = ExtResource("4_5sfjl")
 stretch_mode = 5
 windowTeste = ExtResource("9_l5cgh")
 
-[node name="EMAIL" parent="GridContainer" instance=ExtResource("3_lrqlo")]
+[node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
+z_index = 1
 custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
+layout_mode = 0
+offset_left = 330.0
+offset_top = 105.0
+offset_right = 390.0
+offset_bottom = 165.0
 focus_mode = 0
 texture_normal = ExtResource("5_3hfy5")
 stretch_mode = 5
 windowTeste = ExtResource("8_7pvxh")
 
-[node name="NOTAS" parent="GridContainer" instance=ExtResource("3_lrqlo")]
+[node name="NOTAS" parent="." instance=ExtResource("3_lrqlo")]
+z_index = 1
 custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
+layout_mode = 0
+offset_left = 170.0
+offset_top = 185.0
+offset_right = 230.0
+offset_bottom = 245.0
 focus_mode = 0
 texture_normal = ExtResource("6_7pvxh")
 stretch_mode = 5
