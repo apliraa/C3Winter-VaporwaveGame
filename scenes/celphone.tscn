@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw2lnqefk5fdp"]
+[gd_scene load_steps=2 format=3 uid="uid://dw2lnqefk5fdp"]
 
-[ext_resource type="Script" uid="uid://dwgxc43s7mkk" path="res://scripts/celphone.cs" id="1_4vcnu"]
 [ext_resource type="Texture2D" uid="uid://bqs6a7xwowex8" path="res://assets/screens/Ligação1.png" id="2_6kwur"]
 
 [node name="Celphone" type="Control"]
@@ -8,9 +7,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 5.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4vcnu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -42,8 +44,9 @@ grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "..."
 alignment = 1
+clear_button_enabled = true
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="Label" type="RichTextLabel" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,4 +62,4 @@ grow_vertical = 2
 text = "Qual o nome dele?"
 horizontal_alignment = 1
 
-[connection signal="text_submitted" from="TextureRect/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_changed" from="TextureRect/LineEdit" to="." method="_on_line_edit_text_changed"]
