@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cphspbwwuvjig"]
+[gd_scene load_steps=10 format=3 uid="uid://cphspbwwuvjig"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_7b8rp"]
 [ext_resource type="Texture2D" uid="uid://dmy8rvnqjjkoh" path="res://assets/screens/Tela_Email.png" id="2_5mh1g"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_7b8rp"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_2v5ra"]
+[ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="5_0pjqj"]
+[ext_resource type="PackedScene" uid="uid://ylegn4w3u676" path="res://scenes/OpenEmail.tscn" id="6_0pjqj"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="7_usph6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kmglh"]
+font = ExtResource("7_usph6")
+font_size = 30
+font_color = Color(0.28230172, 0.0007979116, 0.6648828, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0pjqj"]
+font = ExtResource("7_usph6")
+font_size = 30
+font_color = Color(0.33168215, 0.4362216, 0.68960613, 1)
 
 [node name="emailWindow" type="Control"]
 z_index = 6
@@ -56,6 +69,91 @@ icon = ExtResource("3_7b8rp")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_2v5ra")
+
+[node name="EmailButton" parent="." instance=ExtResource("5_0pjqj")]
+z_index = 1
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 144.0
+offset_top = 61.0
+offset_right = 706.0
+offset_bottom = 121.0
+focus_mode = 0
+texture_normal = null
+stretch_mode = 5
+windowTeste = ExtResource("6_0pjqj")
+
+[node name="Label" type="Label" parent="EmailButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 2.0
+offset_right = 536.0
+offset_bottom = 31.0
+text = "testando frases para o Email"
+label_settings = SubResource("LabelSettings_kmglh")
+
+[node name="1 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 102.0
+offset_right = 665.0
+offset_bottom = 137.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="2 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 146.02002
+offset_right = 665.0
+offset_bottom = 181.02002
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="3 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 190.0
+offset_right = 665.0
+offset_bottom = 225.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="4 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 234.0
+offset_right = 665.0
+offset_bottom = 269.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="5 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 275.0
+offset_right = 665.0
+offset_bottom = 310.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="6 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 318.0
+offset_right = 665.0
+offset_bottom = 353.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
+
+[node name="7 escrita" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 361.0
+offset_right = 665.0
+offset_bottom = 396.0
+text = "testando"
+label_settings = SubResource("LabelSettings_0pjqj")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
