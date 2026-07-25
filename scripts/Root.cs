@@ -3,15 +3,19 @@ using System;
 
 public partial class Root : Control
 {
+	[Export] private int time;
+	[Export] private Desktop desktop;
 	
-	
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		SignalBus.Instance.CorruptionCompleted += Reset;
+		desktop.StartCorruption(time);
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	private void Reset()
 	{
+		// implementar código de reinicialização
+		GD.Print("RESET");
 	}
+
 }

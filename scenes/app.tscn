@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://44rwpvg31q77"]
+[gd_scene load_steps=2 format=3 uid="uid://44rwpvg31q77"]
 
-[ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/icons/Arquivo_Aberto_Hover.png" id="1_1670a"]
 [ext_resource type="Script" uid="uid://b3velykf3wh1l" path="res://scripts/Arquivos.cs" id="2_dmsei"]
 
 [node name="app" type="TextureButton"]
 offset_right = 48.0
 offset_bottom = 48.0
-texture_normal = ExtResource("1_1670a")
 stretch_mode = 3
 script = ExtResource("2_dmsei")
 

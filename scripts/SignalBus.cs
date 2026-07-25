@@ -7,11 +7,16 @@ public partial class SignalBus : Node
 
 	[Signal] public delegate void AppSelectedEventHandler();
 	[Signal] public delegate void WindowFocusedEventHandler();
+    [Signal] public delegate void CorruptionCompletedEventHandler();
 
     public override void _Ready()
     {
         Instance = this;
     }
 
+    private void Reset()
+	{
+		// implementar código de reinicialização
+	}
 
 }

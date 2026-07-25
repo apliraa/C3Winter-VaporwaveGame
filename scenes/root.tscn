@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=16 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
-[ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_l5cgh"]
+[ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
 [ext_resource type="Texture2D" uid="uid://g7p6gnrdgrtm" path="res://assets/screens/tela computador.png" id="3_vgks2"]
 [ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
@@ -11,11 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/icons/Bloco_Notas1.png" id="6_7pvxh"]
 [ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
 [ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
+[ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="8_l5cgh"]
 [ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
 [ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="9_vgks2"]
 [ext_resource type="PackedScene" uid="uid://db0hyw3xeksj3" path="res://scenes/notesWindow.tscn" id="13_vgks2"]
+[ext_resource type="Texture2D" uid="uid://dg6c41e1ia8tq" path="res://assets/icons/Papel1.png" id="14_vgks2"]
+[ext_resource type="PackedScene" uid="uid://c8e2bps28pjkb" path="res://scenes/archiveWindow.tscn" id="15_dylgi"]
 
-[node name="root" type="Control"]
+[node name="root" type="Control" node_paths=PackedStringArray("desktop")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,39 +28,16 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
+time = 10
+desktop = NodePath("desktop")
 
-[node name="TextureRect3" type="TextureRect" parent="."]
-z_index = 50
-layout_mode = 0
-offset_right = 1281.0
-offset_bottom = 720.0
-texture = ExtResource("2_l5cgh")
-expand_mode = 1
+[node name="Timer" type="Timer" parent="."]
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 122.261475
-offset_top = 65.0
-offset_right = 1151.0953
-offset_bottom = 645.0
-texture = ExtResource("3_vgks2")
-
-[node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
-z_index = 1
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 0
-offset_left = 1057.0
-offset_top = 521.0
-offset_right = 1117.0
-offset_bottom = 581.0
-focus_mode = 0
-texture_normal = ExtResource("7_y3xxt")
-stretch_mode = 5
-windowTeste = ExtResource("5_y3xxt")
+[node name="desktop" parent="." instance=ExtResource("2_dylgi")]
+z_index = -2
+layout_mode = 1
 
 [node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
-z_index = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -70,33 +50,6 @@ stretch_mode = 5
 windowTeste = ExtResource("5_7pvxh")
 
 [node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
-z_index = 1
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 0
-offset_left = 250.0
-offset_top = 105.0
-offset_right = 310.0
-offset_bottom = 165.0
-focus_mode = 0
-texture_normal = ExtResource("9_vgks2")
-stretch_mode = 5
-windowTeste = ExtResource("9_l5cgh")
-
-[node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
-z_index = 1
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 0
-offset_left = 330.0
-offset_top = 105.0
-offset_right = 390.0
-offset_bottom = 165.0
-focus_mode = 0
-texture_normal = ExtResource("5_3hfy5")
-stretch_mode = 5
-windowTeste = ExtResource("8_7pvxh")
-
-[node name="NOTAS" parent="." instance=ExtResource("3_lrqlo")]
-z_index = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -104,6 +57,54 @@ offset_top = 185.0
 offset_right = 230.0
 offset_bottom = 245.0
 focus_mode = 0
+texture_normal = ExtResource("8_l5cgh")
+stretch_mode = 5
+windowTeste = ExtResource("9_l5cgh")
+
+[node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 250.0
+offset_top = 105.0
+offset_right = 310.0
+offset_bottom = 165.0
+focus_mode = 0
+texture_normal = ExtResource("5_3hfy5")
+stretch_mode = 5
+windowTeste = ExtResource("8_7pvxh")
+
+[node name="NOTAS" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 330.0
+offset_top = 105.0
+offset_right = 390.0
+offset_bottom = 165.0
+focus_mode = 0
 texture_normal = ExtResource("6_7pvxh")
 stretch_mode = 5
 windowTeste = ExtResource("13_vgks2")
+
+[node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 505.0
+offset_right = 1110.0
+offset_bottom = 565.0
+focus_mode = 0
+texture_normal = ExtResource("7_y3xxt")
+stretch_mode = 5
+windowTeste = ExtResource("5_y3xxt")
+
+[node name="ARQUIVO1" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 250.0
+offset_top = 265.0
+offset_right = 310.0
+offset_bottom = 325.0
+focus_mode = 0
+texture_normal = ExtResource("14_vgks2")
+stretch_mode = 5
+windowTeste = ExtResource("15_dylgi")
