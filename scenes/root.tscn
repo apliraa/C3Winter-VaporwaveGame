@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=15 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_l5cgh"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
 [ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
 [ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
+[ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="9_vgks2"]
 [ext_resource type="PackedScene" uid="uid://db0hyw3xeksj3" path="res://scenes/notesWindow.tscn" id="13_vgks2"]
 
 [node name="root" type="Control"]
@@ -26,12 +27,12 @@ size_flags_vertical = 3
 script = ExtResource("1_kycxp")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-z_index = 10
+z_index = 50
 layout_mode = 0
-offset_top = -5.0
 offset_right = 1281.0
 offset_bottom = 720.0
 texture = ExtResource("2_l5cgh")
+expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_index = 1
@@ -77,6 +78,7 @@ offset_top = 105.0
 offset_right = 310.0
 offset_bottom = 165.0
 focus_mode = 0
+texture_normal = ExtResource("9_vgks2")
 stretch_mode = 5
 windowTeste = ExtResource("9_l5cgh")
 
