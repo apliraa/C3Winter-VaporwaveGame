@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=4 format=3 uid="uid://bwpcntty6uqeh"]
 
-[ext_resource type="Texture2D" uid="uid://c3yarbxwrru5t" path="res://assets/icon.svg" id="1_j5px3"]
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="Texture2D" uid="uid://bjce1owqchtki" path="res://assets/images.jpeg" id="1_twpsu"]
-[ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/Arquivo_Aberto_Hover.png" id="2_lrqlo"]
-[ext_resource type="Script" uid="uid://b3velykf3wh1l" path="res://scripts/Arquivos.cs" id="3_jh1ax"]
-[ext_resource type="PackedScene" uid="uid://7ukcnxpr7lhx" path="res://scenes/newWindow.tscn" id="4_sqa0i"]
+[ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
 
 [node name="root" type="Control"]
 layout_mode = 3
@@ -41,44 +38,35 @@ theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 columns = 3
 
-[node name="arquivos" type="Button" parent="GridContainer"]
+[node name="app" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("2_lrqlo")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("3_jh1ax")
-windowTeste = ExtResource("4_sqa0i")
 
-[node name="email" type="Button" parent="GridContainer"]
+[node name="app2" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="MSN" type="Button" parent="GridContainer"]
+[node name="app3" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button13" type="Button" parent="GridContainer"]
+[node name="app4" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button5" type="Button" parent="GridContainer"]
+[node name="app5" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button6" type="Button" parent="GridContainer"]
+[node name="app6" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button7" type="Button" parent="GridContainer"]
+[node name="app7" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button8" type="Button" parent="GridContainer"]
+[node name="app8" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[node name="Button9" type="Button" parent="GridContainer"]
+[node name="app9" parent="GridContainer" instance=ExtResource("3_lrqlo")]
 layout_mode = 2
-icon = ExtResource("1_j5px3")
 
-[connection signal="pressed" from="GridContainer/arquivos" to="GridContainer/arquivos" method="_on_pressed"]
+[node name="app10" parent="GridContainer" instance=ExtResource("3_lrqlo")]
+layout_mode = 2
+
+[node name="app11" parent="GridContainer" instance=ExtResource("3_lrqlo")]
+layout_mode = 2

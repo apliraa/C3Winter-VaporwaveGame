@@ -15,6 +15,10 @@ run/main_scene="uid://bwpcntty6uqeh"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+SignalBus="*res://scripts/SignalBus.cs"
+
 [display]
 
 window/size/viewport_width=1280
