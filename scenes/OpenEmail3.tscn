@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ylegn4w3u676"]
+[gd_scene load_steps=5 format=3 uid="uid://bax5oi1w6i1dm"]
 
-[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_kj4fp"]
-[ext_resource type="Texture2D" uid="uid://bdn1uah5sca8g" path="res://assets/screens/fundo.png" id="2_y45fp"]
-[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_ga0bb"]
-[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_lmgdf"]
+[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_n1ymd"]
+[ext_resource type="Texture2D" uid="uid://dggx5idmndgtt" path="res://assets/screens/Pista Puzzle 3.png" id="2_n1ymd"]
+[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_s24b1"]
+[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_0koih"]
 
 [node name="emailWindow" type="Control"]
 z_index = 7
@@ -13,7 +13,7 @@ offset_left = 500.0
 offset_top = 164.0
 offset_right = 500.0
 offset_bottom = 164.0
-script = ExtResource("1_kj4fp")
+script = ExtResource("1_n1ymd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -26,7 +26,7 @@ offset_right = 709.0
 offset_bottom = 403.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_y45fp")
+texture = ExtResource("2_n1ymd")
 expand_mode = 2
 
 [node name="bar" type="Button" parent="."]
@@ -43,19 +43,19 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 670.00006
-offset_top = 2.9999995
-offset_right = 710.00006
+offset_left = 665.0
+offset_top = 3.0
+offset_right = 705.0
 offset_bottom = 43.0
 grow_horizontal = 0
 scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 focus_mode = 0
-icon = ExtResource("3_ga0bb")
+icon = ExtResource("3_s24b1")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_lmgdf")
+script = ExtResource("4_0koih")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
