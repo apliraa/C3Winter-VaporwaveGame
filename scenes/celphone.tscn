@@ -1,31 +1,37 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw2lnqefk5fdp"]
 
-[ext_resource type="Script" uid="uid://dwgxc43s7mkk" path="res://scripts/celphone.cs" id="1_4vcnu"]
-[ext_resource type="Texture2D" uid="uid://bqs6a7xwowex8" path="res://assets/screens/Ligação1.png" id="2_6kwur"]
+[ext_resource type="Texture2D" uid="uid://dvbc8qjc7bqom" path="res://assets/screens/Ligação1 (2).png" id="2_4vcnu"]
+[ext_resource type="Script" uid="uid://darki5spcuu6l" path="res://scripts/Celphone2.cs" id="2_6kwur"]
 
 [node name="Celphone" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4vcnu")
+size_flags_horizontal = 4
+size_flags_vertical = 8
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." node_paths=PackedStringArray("PhoneMarker")]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.99000007
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.99000007
 anchor_bottom = 1.0
-offset_left = -152.5
-offset_top = -508.3333
-offset_right = 152.5
+offset_left = -320.15015
+offset_top = -28.0
+offset_right = -15.1501465
+offset_bottom = 480.33325
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
-texture = ExtResource("2_6kwur")
+texture = ExtResource("2_4vcnu")
+script = ExtResource("2_6kwur")
+PhoneMarker = NodePath("../PhoneMarker")
 
 [node name="LineEdit" type="LineEdit" parent="TextureRect"]
 layout_mode = 1
@@ -42,8 +48,9 @@ grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "..."
 alignment = 1
+clear_button_enabled = true
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="Label" type="RichTextLabel" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,4 +66,22 @@ grow_vertical = 2
 text = "Qual o nome dele?"
 horizontal_alignment = 1
 
-[connection signal="text_submitted" from="TextureRect/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -305.0
+offset_top = -516.33325
+offset_right = -1.0
+offset_bottom = -496.33325
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PhoneMarker" type="Marker2D" parent="."]
+position = Vector2(960, 192)
+
+[connection signal="text_changed" from="TextureRect/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect" method="_on_button_pressed"]
