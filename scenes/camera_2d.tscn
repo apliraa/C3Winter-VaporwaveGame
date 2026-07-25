@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8rabiej068uh"]
 
-[ext_resource type="Script" uid="uid://cftg25jpsxgt7" path="res://Camera2d.cs" id="1_jtxfu"]
-[ext_resource type="Script" uid="uid://b1lwebmd1ainp" path="res://Window.cs" id="2_wb1d8"]
+[ext_resource type="Script" uid="uid://cftg25jpsxgt7" path="res://scripts/Camera2d.cs" id="1_jtxfu"]
+[ext_resource type="Script" uid="uid://b1lwebmd1ainp" path="res://scripts/Window.cs" id="2_wb1d8"]
 
 [node name="Camera2D" type="Camera2D"]
 script = ExtResource("1_jtxfu")
