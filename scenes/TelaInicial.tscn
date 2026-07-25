@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b05ff2watqm04"]
+
+[ext_resource type="Texture2D" uid="uid://dy6u40tk6ka76" path="res://assets/screens/tela desligada.png" id="1_0b72l"]
+[ext_resource type="Script" uid="uid://fq4abedxy1yg" path="res://scripts/TelaInicial.cs" id="2_17ume"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="3_6ybww"]
+[ext_resource type="Texture2D" uid="uid://bckfpu6ghu735" path="res://assets/icons/Botão_ligado.png" id="4_1exgo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ybww"]
+font = ExtResource("3_6ybww")
+font_size = 150
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_17ume")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1285.0
+offset_bottom = 722.0
+texture = ExtResource("1_0b72l")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 665.0
+offset_right = 734.0
+offset_bottom = 785.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("4_1exgo")
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 148.0
+offset_right = 855.0
+offset_bottom = 435.0
+text = "  Nome 
+do Jogo"
+label_settings = SubResource("LabelSettings_6ybww")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
