@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://7ukcnxpr7lhx"]
+[gd_scene load_steps=5 format=3 uid="uid://b2v4nts1sxtce"]
 
-[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_58327"]
-[ext_resource type="Texture2D" uid="uid://d3fiym8jmti1j" path="res://assets/Tela_BlocodeNotas.png" id="2_58327"]
-[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/Botão_Fechar.png" id="3_58327"]
-[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="3_b6ycw"]
+[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_gfhfj"]
+[ext_resource type="Texture2D" uid="uid://bj7x0csvj86nq" path="res://assets/simple_background.webp" id="2_if31l"]
+[ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/Botão_Fechar.png" id="3_p8mrx"]
+[ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_o33ma"]
 
-[node name="BlocoDeNotas" type="Control"]
+[node name="NewWindow" type="Control"]
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
@@ -13,7 +13,7 @@ offset_left = 500.0
 offset_top = 164.0
 offset_right = 500.0
 offset_bottom = 164.0
-script = ExtResource("1_58327")
+script = ExtResource("1_gfhfj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -22,20 +22,17 @@ anchor_left = 0.35546875
 anchor_top = 0.175
 anchor_right = 0.9110243
 anchor_bottom = 0.73055553
-offset_left = 4.0
-offset_top = -1.0
-offset_right = 710.0
-offset_bottom = 399.0
+offset_right = 709.0
+offset_bottom = 403.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_58327")
+texture = ExtResource("2_if31l")
 
 [node name="bar" type="Button" parent="."]
 layout_mode = 0
 offset_right = 710.0
 offset_bottom = 28.0
 keep_pressed_outside = true
-flat = true
 
 [node name="CloseButton" type="Button" parent="."]
 z_index = 1
@@ -43,18 +40,18 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 669.00006
-offset_top = 1.9999998
-offset_right = 709.00006
-offset_bottom = 42.0
+offset_left = 677.00006
+offset_top = -2.0
+offset_right = 717.00006
+offset_bottom = 38.0
 grow_horizontal = 0
 scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 8
 size_flags_vertical = 8
-icon = ExtResource("3_58327")
+icon = ExtResource("3_p8mrx")
 flat = true
 icon_alignment = 1
-script = ExtResource("3_b6ycw")
+script = ExtResource("4_o33ma")
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
