@@ -8,8 +8,14 @@ public partial class Root : Control
 	
 	public override void _Ready()
 	{
+		SignalBus.Instance.CorruptionCompleted += Reset;
 		desktop.StartCorruption(time);
 	}
 
+	private void Reset()
+	{
+		// implementar código de reinicialização
+		GD.Print("RESET");
+	}
 
 }
