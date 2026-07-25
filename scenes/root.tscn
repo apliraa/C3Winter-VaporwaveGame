@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=17 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
-[ext_resource type="Texture2D" uid="uid://dobqu1vyixhho" path="res://assets/screens/Tela_Desktop.png" id="2_j287u"]
+[ext_resource type="Texture2D" uid="uid://g7p6gnrdgrtm" path="res://assets/screens/tela computador.png" id="2_jrhyn"]
+[ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="3_log26"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
 [ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
 [ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/icons/Email_Fechado2.png" id="5_3hfy5"]
@@ -27,22 +28,35 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 133.33331
+offset_top = 75.0
+offset_right = -133.33337
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_j287u")
-expand_mode = 2
+texture = ExtResource("2_jrhyn")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = 20
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 725.0
+texture = ExtResource("3_log26")
+metadata/_edit_lock_ = true
 
 [node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
-offset_left = 173.0
+offset_left = 170.0
 offset_top = 105.0
-offset_right = 233.0
+offset_right = 230.0
 offset_bottom = 165.0
 focus_mode = 0
 texture_normal = ExtResource("4_3hfy5")
