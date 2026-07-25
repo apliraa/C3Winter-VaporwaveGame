@@ -11,17 +11,26 @@ config_version=5
 [application]
 
 config/name="VaporwaveGame"
-run/main_scene="uid://c8rabiej068uh"
+run/main_scene="uid://bwpcntty6uqeh"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://assets/icon.svg"
+
+[autoload]
+
+SignalBus="*res://scripts/SignalBus.cs"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="VaporwaveGame"
 
-[input]
+[rendering]
 
-escrever={
-"deadzone": 0.2,
-"events": []
-}
+textures/canvas_textures/default_texture_filter=0
