@@ -5,76 +5,89 @@ using System.Collections.Generic;
 public partial class Celphone : Control
 {
 
-private List<string> Answears = new List<string> { "Ailton", "Faca", "Esfaqueado", "10:40", "Bunker" };
+private List<string> Answears = new List<string> { "Júlio Batista", "Veneno", "Envenenamento", "00:00", "Bunker" };
 
 	private List<string> Dialogue = new List<string>
 	{
 		"Qual o nome do assassino?",
 		"Qual a arma utilizada no crime?",
 		"Qual a causa da morte?",
-		"Qual o horário do assassinato? (hh:mm):",
+		"Qual o horário do assassinato?",
 		"Onde o corpo foi encontrado?",
 	
 	};
 
-	private List<string> wordsRight = new List<string>();
+	private List<int> correctAnswers = new List<int>();
+	private int dialogueIndex = 0;
 	private Label labelDialogue;
 	private LineEdit campoTexto;
 
 	public override void _Ready()
 	{
-		labelDialogue = GetNodeOrNull<Label>("TextureRect/Label");
+	
+		GD.Print("sinal forte");
+	
+		labelDialogue = GetNodeOrNull<Label>("%Label");
 
-		campoTexto = GetNodeOrNull<LineEdit>("TextureRect/LineEdit");
+		campoTexto = GetNodeOrNull<LineEdit>("%LineEdit");
 
 		if(campoTexto != null)
 		{
-			campoTexto.TextSubmitted -= _on_line_edit_text_submitted;
-			campoTexto.TextSubmitted += _on_line_edit_text_submitted;
+			campoTexto.TextSubmitted += OnTextSubmittedManual;
 		}
 
 		UpdateDialogue();
 	}
 	
 
-	public void _on_line_edit_text_submitted(string newDialogue)
+	public void OnTextSubmittedManual(string newDialogue)
 	{
 		
-		if (wordsRight.Count >= Answears.Count)
+		if (dialogueIndex >= Dialogue.Count)
 		{
 			return;
 		}
+
+		GD.Print($"{dialogueIndex}/{newDialogue}");
+
+		string expectedAnswer = Answears[dialogueIndex];
 		
-		
-
-		int currentIndex = wordsRight.Count;
-
-		string expectedAnswer = Answears[currentIndex];
-
 		if (newDialogue.Equals(expectedAnswer, StringComparison.OrdinalIgnoreCase))
 		{
-			wordsRight.Add(expectedAnswer);
-			GD.Print($"{wordsRight.Count}/5");
-			
-			if (wordsRight.Count == Answears.Count)
+			if (!correctAnswers.Contains(dialogueIndex))
 			{
-				verifyAnswers();
+				correctAnswers.Add(dialogueIndex);
 			}
 		}
-	
 		else
 		{
-			wordsRight.Clear();
+			GD.Print("Resposta incorreta: " + newDialogue);
 		}
 
 		if (campoTexto != null)
 		{
 			campoTexto.Text = "";
 		}
+
+		dialogueIndex++;
 		
 		UpdateDialogue();
 	}
-
+	private void verifyEnd()
+	{
+		GD.Print($"acertou {correctAnswers.Count}/{Answears.Count}");
+		
+		if (correctAnswers.Count == Answears.Count)
+		{
+			verifyAnswers();
+		}
+		else
+		{
+			correctAnswers.Clear();
+			dialogueIndex = 0;
+			UpdateDialogue();
+		}
+	}
 	public void verifyAnswers()
 	{
 		Hide();
@@ -84,10 +97,15 @@ private List<string> Answears = new List<string> { "Ailton", "Faca", "Esfaqueado
 
 	private void UpdateDialogue()
 	{
-		if (labelDialogue != null && wordsRight.Count < Dialogue.Count)
+		if (labelDialogue != null && dialogueIndex < Dialogue.Count)
 		{
-			labelDialogue.Text = Dialogue[wordsRight.Count];
+			labelDialogue.Text = Dialogue[dialogueIndex];
 			labelDialogue.Visible = true;
+		}
+		else
+		{
+		
+			verifyEnd();
 		}
 	}
 }
