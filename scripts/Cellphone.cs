@@ -6,7 +6,7 @@ using System.Linq;
 public partial class Cellphone : Control
 {
 
-	private List<string> Answears = new List<string> { "Ailton", "Veneno", "Envenenamento", "00:00", "Bunker" };
+	private List<string> Answears = new List<string> { "Julio Batista", "Veneno", "Envenenamento", "00:00", "Bunker" };
 
 	private List<string> Dialogue = new List<string>
 	{

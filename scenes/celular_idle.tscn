@@ -26,13 +26,16 @@ offset_right = -1.0
 offset_bottom = -496.33325
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
 
 [node name="call" type="Button" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 349.0
-offset_right = 121.0
-offset_bottom = 434.0
+offset_left = 44.0
+offset_top = 345.0
+offset_right = 133.0
+offset_bottom = 436.0
+focus_mode = 0
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="call" to="." method="_on_call_pressed"]
