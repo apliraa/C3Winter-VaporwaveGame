@@ -10,31 +10,26 @@ public partial class Celphone2 : Control
 	{
 		initialPosition =  GlobalPosition;
 		
-		
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
 	}
 	public void _on_button_pressed(){
 
 		if(PhoneMarker == null) return;
 		Tween phoneTween = CreateTween().SetTrans(Tween.TransitionType.Sine);
 
-		if ( !isOut){
+		//if ( !isOut){
 			
 			phoneTween.TweenProperty(this, "position:y", PhoneMarker.GlobalPosition.Y, 0.5f   );
 			//GlobalPosition = PhoneMarker.GlobalPosition;
-
-		}
-		else
-		{
-			phoneTween.TweenProperty(this, "position:y", initialPosition.Y, 0.5f   );
-		}
-		isOut = !isOut;
+}
+}
+		//}
+		//else
+		//{
+		//	phoneTween.TweenProperty(this, "position:y", initialPosition.Y, 0.5f   );
+		//}
+		//isOut = !isOut;
 		
-		}
+		//}
 		
-	}
+	//}
 	

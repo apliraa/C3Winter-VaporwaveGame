@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck1knwowgmcwc"]
+
+[ext_resource type="Texture2D" uid="uid://dvbc8qjc7bqom" path="res://assets/screens/Ligação1 (2).png" id="1_xerak"]
+[ext_resource type="Script" uid="uid://darki5spcuu6l" path="res://scripts/Celphone2.cs" id="2_ihbhh"]
+
+[node name="TextureRect2" type="TextureRect" node_paths=PackedStringArray("PhoneMarker")]
+z_index = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -333.0
+offset_top = -20.0
+offset_right = -28.0
+offset_bottom = 488.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_xerak")
+script = ExtResource("2_ihbhh")
+PhoneMarker = NodePath("")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -305.0
+offset_top = -516.33325
+offset_right = -1.0
+offset_bottom = -496.33325
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CallButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 344.0
+offset_right = 128.0
+offset_bottom = 432.0

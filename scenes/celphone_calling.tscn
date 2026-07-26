@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctuqdycyft2le"]
+
+[ext_resource type="Texture2D" uid="uid://dmx8v0pcvhifj" path="res://assets/screens/atendendo.png" id="1_le3wf"]
+[ext_resource type="Script" uid="uid://o401hd8v6u33" path="res://scripts/Celphone.cs" id="2_561yh"]
+
+[node name="TextureRect2" type="TextureRect"]
+anchors_preset = -1
+anchor_left = 0.86300004
+anchor_top = 1.3290001
+anchor_right = 0.86300004
+anchor_bottom = 1.3290001
+offset_left = -1547.0751
+offset_top = -1161.9161
+offset_right = -1242.0751
+offset_bottom = -653.5829
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+texture = ExtResource("1_le3wf")
+script = ExtResource("2_561yh")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = 32.833405
+offset_right = 92.5
+offset_bottom = 63.833466
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "..."
+alignment = 1
+clear_button_enabled = true
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -81.166595
+offset_right = 84.5
+offset_bottom = -49.49991
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ele pegunta aquis :P"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39400002
+anchor_top = 0.753
+anchor_right = 0.619
+anchor_bottom = 0.78300005
+offset_left = -8.170006
+offset_top = -36.774963
+offset_right = 7.205002
+offset_bottom = 36.975037
+grow_vertical = 2
+
+[connection signal="text_submitted" from="LineEdit" to="." method="OnLineEditTextSubmitted"]

@@ -15,4 +15,7 @@ public partial class TelaInicial : Control
 	public void _on_button_pressed(){
 		GetTree().ChangeSceneToFile("res://scenes/root.tscn");
 	}
+
+
 }
+
