@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=18 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
+[ext_resource type="Script" uid="uid://c6pbretctmtg1" path="res://scripts/AppManager.cs" id="2_log26"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
 [ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
 [ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/icons/Email_Fechado2.png" id="5_3hfy5"]
@@ -27,15 +28,19 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
-time = 99999
+time = 5
 desktop = NodePath("desktop")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="AppManager" type="Node2D" parent="." node_paths=PackedStringArray("apps", "arquivos")]
+script = ExtResource("2_log26")
+apps = [NodePath("../MSN"), NodePath("../NAV"), NodePath("../EMAIL"), NodePath("../LIXO")]
+arquivos = [NodePath("../ARQUIVO1")]
 
 [node name="desktop" parent="." instance=ExtResource("2_dylgi")]
 layout_mode = 1
 
 [node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -48,6 +53,7 @@ stretch_mode = 5
 windowTeste = ExtResource("5_7pvxh")
 
 [node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -60,6 +66,7 @@ stretch_mode = 5
 windowTeste = ExtResource("9_l5cgh")
 
 [node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 250.0
@@ -84,6 +91,7 @@ stretch_mode = 5
 windowTeste = ExtResource("13_vgks2")
 
 [node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 1050.0
@@ -96,6 +104,7 @@ stretch_mode = 5
 windowTeste = ExtResource("5_y3xxt")
 
 [node name="ARQUIVO1" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 250.0

@@ -7,6 +7,7 @@
 [ext_resource type="Shader" uid="uid://sv3epdyrd7ho" path="res://shaders/color_shift.gdshader" id="5_dcrhm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dcrhm"]
+resource_local_to_scene = true
 shader = ExtResource("5_dcrhm")
 shader_parameter/use_grayscale = false
 shader_parameter/shift_color = Color(1, 1, 1, 1)
@@ -14,6 +15,7 @@ shader_parameter/shift_color = Color(1, 1, 1, 1)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6ajoh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6ajoh"]
+resource_local_to_scene = true
 shader = ExtResource("2_ox5hf")
 shader_parameter/progress = 0.0
 shader_parameter/meltiness = 0.5890000279775

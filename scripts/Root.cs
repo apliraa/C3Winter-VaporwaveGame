@@ -14,7 +14,8 @@ public partial class Root : Control
 
 	private void Reset()
 	{
-		// implementar código de reinicialização
+		GetTree().ChangeSceneToFile("res://scenes/TelaInicial.tscn");
+		SignalBus.Instance.CorruptionCompleted -= Reset;
 		GD.Print("RESET");
 	}
 

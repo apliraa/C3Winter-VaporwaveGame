@@ -14,9 +14,4 @@ public partial class SignalBus : Node
         Instance = this;
     }
 
-    private void Reset()
-	{
-		// implementar código de reinicialização
-	}
-
 }

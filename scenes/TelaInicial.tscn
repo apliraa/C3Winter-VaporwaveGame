@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b05ff2watqm04"]
+[gd_scene load_steps=7 format=3 uid="uid://b05ff2watqm04"]
 
 [ext_resource type="Texture2D" uid="uid://dy6u40tk6ka76" path="res://assets/screens/tela desligada.png" id="1_0b72l"]
 [ext_resource type="Script" uid="uid://fq4abedxy1yg" path="res://scripts/TelaInicial.cs" id="2_17ume"]
 [ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="3_6ybww"]
 [ext_resource type="Texture2D" uid="uid://bckfpu6ghu735" path="res://assets/icons/Botão_ligado.png" id="4_1exgo"]
+[ext_resource type="PackedScene" uid="uid://dldvh4gp7yfbu" path="res://scenes/music_button.tscn" id="5_1exgo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ybww"]
 font = ExtResource("3_6ybww")
@@ -42,5 +43,18 @@ offset_bottom = 435.0
 text = "  Nome 
 do Jogo"
 label_settings = SubResource("LabelSettings_6ybww")
+
+[node name="music buttons" type="Node2D" parent="."]
+
+[node name="stop_music" parent="music buttons" instance=ExtResource("5_1exgo")]
+position = Vector2(471, 686)
+
+[node name="play_track1" parent="music buttons" instance=ExtResource("5_1exgo")]
+position = Vector2(501, 686)
+buttonType = 1
+
+[node name="play_track2" parent="music buttons" instance=ExtResource("5_1exgo")]
+position = Vector2(531, 686)
+buttonType = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
