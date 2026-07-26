@@ -27,9 +27,9 @@ private List<string> Answears = new List<string> { "Júlio Batista", "Veneno", "
 	
 		GD.Print("sinal forte");
 	
-		labelDialogue = GetNodeOrNull<Label>("%Label");
+		labelDialogue = GetNodeOrNull<Label>("TextureRect/Label");
 
-		campoTexto = GetNodeOrNull<LineEdit>("%LineEdit");
+		campoTexto = GetNodeOrNull<LineEdit>("TextureRect/LineEdit");
 
 		if(campoTexto != null)
 		{
