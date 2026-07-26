@@ -112,10 +112,9 @@ theme_override_constants/side_margin = 0
 theme_override_fonts/font = ExtResource("6_o33ma")
 theme_override_styles/panel = SubResource("StyleBoxFlat_p8mrx")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_ji63l")
-current_tab = 2
+current_tab = 0
 
 [node name="Minha vida <3" type="PanelContainer" parent="ScrollContainer/TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_cxcd8")
 metadata/_tab_index = 0
@@ -205,6 +204,7 @@ Não queria resetar ele e como está decorado
 [left] Joia"
 
 [node name="Medicamentos Cacao" type="PanelContainer" parent="ScrollContainer/TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yk1w7")
 metadata/_tab_index = 2
@@ -239,7 +239,6 @@ Vamos marcar para comemorar minha pesquisa quando der certo, tudo bem?
 [left] 
  Gosto de ver você assim!!
  Cheio de si
- Te mandei o recibo por email, aqui não carregou
  Bem vindo de volta, Jota."
 
 [node name="Sr Batista" type="PanelContainer" parent="ScrollContainer/TabContainer"]
