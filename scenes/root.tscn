@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=20 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/icons/Bloco_Notas1.png" id="6_7pvxh"]
 [ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
 [ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
+[ext_resource type="PackedScene" uid="uid://dshtf3lpwakx0" path="res://scenes/Jornal.tscn" id="8_gt4lb"]
 [ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
 [ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="9_vgks2"]
+[ext_resource type="PackedScene" path="res://scenes/Recibo.tscn" id="9_ya6yc"]
 [ext_resource type="PackedScene" uid="uid://db0hyw3xeksj3" path="res://scenes/notesWindow.tscn" id="13_vgks2"]
 [ext_resource type="Texture2D" uid="uid://dg6c41e1ia8tq" path="res://assets/icons/Papel1.png" id="14_vgks2"]
 [ext_resource type="PackedScene" uid="uid://c8e2bps28pjkb" path="res://scenes/archiveWindow.tscn" id="15_dylgi"]
@@ -34,8 +36,8 @@ desktop = NodePath("desktop")
 
 [node name="AppManager" type="Node2D" parent="." node_paths=PackedStringArray("apps", "arquivos")]
 script = ExtResource("2_log26")
-apps = [NodePath("../MSN"), NodePath("../NAV"), NodePath("../EMAIL"), NodePath("../LIXO")]
-arquivos = [NodePath("../ARQUIVO1")]
+apps = []
+arquivos = []
 
 [node name="desktop" parent="." instance=ExtResource("2_dylgi")]
 layout_mode = 1
@@ -52,6 +54,31 @@ focus_mode = 0
 texture_normal = ExtResource("4_3hfy5")
 stretch_mode = 5
 windowTeste = ExtResource("5_7pvxh")
+
+[node name="JORNAL" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 248.0
+offset_top = 179.0
+offset_right = 308.0
+offset_bottom = 239.0
+focus_mode = 0
+texture_normal = ExtResource("14_vgks2")
+stretch_mode = 5
+windowTeste = ExtResource("8_gt4lb")
+
+[node name="RECIBO" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 332.0
+offset_top = 181.0
+offset_right = 392.0
+offset_bottom = 241.0
+focus_mode = 0
+texture_normal = ExtResource("14_vgks2")
+stretch_mode = 5
+windowTeste = ExtResource("9_ya6yc")
 
 [node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
 visible = false
@@ -92,7 +119,6 @@ stretch_mode = 5
 windowTeste = ExtResource("13_vgks2")
 
 [node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 1050.0
