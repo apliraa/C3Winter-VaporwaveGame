@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="3_lrqlo"]
-[ext_resource type="Texture2D" uid="uid://g7p6gnrdgrtm" path="res://assets/screens/tela computador.png" id="3_vgks2"]
 [ext_resource type="Texture2D" uid="uid://lgo870pi6g0x" path="res://assets/icons/Chat_Duplo1.png" id="4_3hfy5"]
 [ext_resource type="Texture2D" uid="uid://cecihv6gu8r52" path="res://assets/icons/Email_Fechado2.png" id="5_3hfy5"]
 [ext_resource type="PackedScene" uid="uid://b2v4nts1sxtce" path="res://scenes/MSNWindow.tscn" id="5_7pvxh"]
@@ -11,14 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/icons/Bloco_Notas1.png" id="6_7pvxh"]
 [ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
 [ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
-[ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="8_l5cgh"]
 [ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
 [ext_resource type="Texture2D" uid="uid://bfn03qtaj0w7u" path="res://assets/icons/U_Navegador_1.png" id="9_vgks2"]
 [ext_resource type="PackedScene" uid="uid://db0hyw3xeksj3" path="res://scenes/notesWindow.tscn" id="13_vgks2"]
 [ext_resource type="Texture2D" uid="uid://dg6c41e1ia8tq" path="res://assets/icons/Papel1.png" id="14_vgks2"]
 [ext_resource type="PackedScene" uid="uid://c8e2bps28pjkb" path="res://scenes/archiveWindow.tscn" id="15_dylgi"]
 
-[node name="root" type="Control" node_paths=PackedStringArray("desktop")]
+[node name="root" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,8 +26,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
-time = 10
-desktop = NodePath("desktop")
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -57,7 +53,7 @@ offset_top = 185.0
 offset_right = 230.0
 offset_bottom = 245.0
 focus_mode = 0
-texture_normal = ExtResource("8_l5cgh")
+texture_normal = ExtResource("9_vgks2")
 stretch_mode = 5
 windowTeste = ExtResource("9_l5cgh")
 
