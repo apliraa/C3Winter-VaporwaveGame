@@ -1,9 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2v4nts1sxtce"]
+[gd_scene load_steps=17 format=3 uid="uid://b2v4nts1sxtce"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_gfhfj"]
 [ext_resource type="Texture2D" uid="uid://clq487idgox4a" path="res://assets/screens/janela chat vazia.png" id="2_gfhfj"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_p8mrx"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_o33ma"]
+[ext_resource type="Texture2D" uid="uid://dc4qcs1d646ta" path="res://assets/icons/pink_texture.png" id="5_p8mrx"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="6_o33ma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8mrx"]
+bg_color = Color(0.15686275, 0.15294118, 0.15294118, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji63l"]
+bg_color = Color(1, 0.58431375, 0.8, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxcd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8mrx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o33ma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ji63l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qci0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t52u2"]
+
+[sub_resource type="Theme" id="Theme_waby1"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_p8mrx")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_o33ma")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_ji63l")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_qci0u")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_t52u2")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1w7"]
 
 [node name="MSNWindow" type="Control"]
 z_index = 6
@@ -52,6 +81,215 @@ icon = ExtResource("3_p8mrx")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_o33ma")
+
+[node name="pink_patch" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.000008
+offset_right = 961.9999
+offset_bottom = 68.00001
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_p8mrx")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 674.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/side_margin = 0
+theme_override_fonts/font = ExtResource("6_o33ma")
+theme_override_styles/panel = SubResource("StyleBoxFlat_p8mrx")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_ji63l")
+current_tab = 2
+
+[node name="Minha vida <3" type="PanelContainer" parent="ScrollContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cxcd8")
+metadata/_tab_index = 0
+
+[node name="chat minha vida" type="RichTextLabel" parent="ScrollContainer/TabContainer/Minha vida <3"]
+layout_mode = 2
+theme = SubResource("Theme_waby1")
+theme_override_colors/default_color = Color(0.27447626, 5.121112e-05, 0.27488896, 1)
+theme_override_fonts/normal_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_italics_font = ExtResource("6_o33ma")
+theme_override_fonts/italics_font = ExtResource("6_o33ma")
+theme_override_fonts/mono_font = ExtResource("6_o33ma")
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i] 24 de Abril de 2008[/i]
+[left] Meu amor
+ Não esqueça que amanhã você não pode marcar nada!! O dia é nosso!!
+[right]Claro, querida 
+Eu nunca, nunca, nunca ia esquecer 
+Impossível 
+
+[center][i] 30 de Janeiro de 2009[/i]
+ [left] Não consigo passar!
+[right]
+O que? 
+[left] Xadrez! Você me viciou… Não consigo deixar de jogar aqui no hospital
+ Olha
+[img = 128x128]res://assets/icons/xadrez.png[/img]
+
+[right]Eu anotei as jogadas ontem pra você 
+
+[left] Amor, eu não lembro onde os números começam…Só lembro as letras
+[right]
+Sua memória é tão boa pra algumas coisa e tão péssima pra outras 
+Sério 
+Tá aqui 
+[img = 128x128]res://assets/icons/xadrez_posicoes.png[/img]
+[left] Amo Você :)
+ Quero terminar esse aqui com você quando eu voltar pra casa
+[right] 
+Claro, meu bem 
+
+[center][i] 02 de Outubro de 2013[/i]
+
+[right]Eu preciso tanto de você de volta 
+
+[center][i] 05 de Março de 2014[/i]
+
+[right]Eu vou te trazer de volta 
+Você me conheceu e se declarou para mim de meia noite 
+Se passasse disso, não seria especial 
+Não seria você 
+Eu te amo "
+
+[node name="Tecnologias" type="PanelContainer" parent="ScrollContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yk1w7")
+metadata/_tab_index = 1
+
+[node name="chat Tecnologias" type="RichTextLabel" parent="ScrollContainer/TabContainer/Tecnologias"]
+layout_mode = 2
+theme = SubResource("Theme_waby1")
+theme_override_colors/default_color = Color(0.27447626, 5.121112e-05, 0.27488896, 1)
+theme_override_fonts/normal_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_italics_font = ExtResource("6_o33ma")
+theme_override_fonts/italics_font = ExtResource("6_o33ma")
+theme_override_fonts/mono_font = ExtResource("6_o33ma")
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]20 de Abril de 2011[/i]
+[right] Bom dia 
+Preciso saber se vocës conseguem fazer com que meu  computador permaneça no sistema operacional atual 
+Não queria resetar ele e como está decorado 
+
+[left] Opa, boa tarde
+ Tava fechada a loja
+ mas sim isso é tranquilo meu parceiro
+ Trz aqui que a gente dá um jeitinho massa
+
+[right] Sem problemas 
+
+[left] Joia"
+
+[node name="Medicamentos Cacao" type="PanelContainer" parent="ScrollContainer/TabContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yk1w7")
+metadata/_tab_index = 2
+
+[node name="Chat Med_ cacao" type="RichTextLabel" parent="ScrollContainer/TabContainer/Medicamentos Cacao"]
+layout_mode = 2
+theme = SubResource("Theme_waby1")
+theme_override_colors/default_color = Color(0.27447626, 5.121112e-05, 0.27488896, 1)
+theme_override_fonts/normal_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_italics_font = ExtResource("6_o33ma")
+theme_override_fonts/italics_font = ExtResource("6_o33ma")
+theme_override_fonts/mono_font = ExtResource("6_o33ma")
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]10 de Março de 2014[/i]
+
+[left] Meu querido amigo, quanto tempo
+ Vim avisar que as caixas dos medicamentos que você pediu chegaram
+ Fico feliz que um farmacêutico tão talentoso tenha voltado a estudar nossa ciência tão bela
+ E com um laboratório pessoal em casa, ein? Quem diria isso seria possível
+ Depois vamos marcar pra se encontrar ein?
+ Quero saber sobre suas pesquisas novas
+ Principalmente com um motivo tão nobre de achar a cura pra doença que tirou ela do mundo
+ Você é forte, meu amigo
+
+[right]Vinícius, pare de usar o número do laboratório para conversar com as pessoas… 
+Sim, eu vou honrar a memória dela 
+Vamos marcar para comemorar minha pesquisa quando der certo, tudo bem? 
+
+[left] 
+ Gosto de ver você assim!!
+ Cheio de si
+ Te mandei o recibo por email, aqui não carregou
+ Bem vindo de volta, Jota."
+
+[node name="Sr Batista" type="PanelContainer" parent="ScrollContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yk1w7")
+metadata/_tab_index = 3
+
+[node name="Chat Sr Batista" type="RichTextLabel" parent="ScrollContainer/TabContainer/Sr Batista"]
+layout_mode = 2
+theme = SubResource("Theme_waby1")
+theme_override_colors/default_color = Color(0.27447626, 5.121112e-05, 0.27488896, 1)
+theme_override_fonts/normal_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_font = ExtResource("6_o33ma")
+theme_override_fonts/bold_italics_font = ExtResource("6_o33ma")
+theme_override_fonts/italics_font = ExtResource("6_o33ma")
+theme_override_fonts/mono_font = ExtResource("6_o33ma")
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "[center][i]10 de Maio de 2009[/i]
+
+[left] Você decidiu mesmo manter o nome de casado?
+
+[right]Foi uma das poucas coisas de sobraram dela 
+Você entende, não é? 
+
+[left] Não deixe isso te prender
+ Minha filha nunca ia querer te ver do jeito que está agora
+
+[right] Ela era meu tudo 
+Ela ainda é 
+Não diga isso
+Ela nunca me prendeu 
+O mundo que prendia uma mente tão incrível, uma alma tão linda 
+Eu amo tanto ela 
+Por que isso aconteceu? 
+Não consigo mais parar de chorar  
+Eu prometi ao senhor que nunca faria ela chorar   
+Que, se eu fizesse isso, o senhor poderia me bater até eu morrer  
+No final, ela foi quem me fez chorar  
+
+[left] Venha visitar a gente amanhã
+ Ester quer te ver e falar com você
+ Ela vai te entregar uma cópia das fotos da Samantha que temos no álbum da família
+[right]Eu vou 
+
+
+
+"
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]

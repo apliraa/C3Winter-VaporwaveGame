@@ -42,7 +42,6 @@ keep_pressed_outside = true
 flat = true
 
 [node name="CloseButton" type="Button" parent="."]
-z_index = 1
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -70,7 +69,6 @@ offset_top = 102.0
 offset_right = 685.0
 offset_bottom = 139.0
 focus_mode = 0
-texture_normal = null
 stretch_mode = 5
 windowTeste = ExtResource("6_0pjqj")
 
@@ -83,7 +81,6 @@ offset_top = 234.0
 offset_right = 680.0
 offset_bottom = 269.0
 focus_mode = 0
-texture_normal = null
 stretch_mode = 5
 windowTeste = ExtResource("8_0tajy")
 
@@ -96,7 +93,6 @@ offset_top = 277.0
 offset_right = 682.0
 offset_bottom = 312.0
 focus_mode = 0
-texture_normal = null
 stretch_mode = 5
 windowTeste = ExtResource("9_usph6")
 
