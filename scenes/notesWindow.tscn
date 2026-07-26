@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://db0hyw3xeksj3"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_q768o"]
-[ext_resource type="Texture2D" uid="uid://d3fiym8jmti1j" path="res://assets/screens/Tela_BlocodeNotas.png" id="2_q768o"]
+[ext_resource type="Texture2D" uid="uid://c02qkndext7kl" path="res://assets/screens/bloco_de_notas_V2.png" id="2_bn1fd"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_fh4ba"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_20xb2"]
 [ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="5_bn1fd"]
@@ -46,17 +46,21 @@ anchor_left = 0.35546875
 anchor_top = 0.175
 anchor_right = 0.9110243
 anchor_bottom = 0.73055553
-offset_right = 709.0
-offset_bottom = 403.0
+offset_left = 227.99998
+offset_top = -39.0
+offset_right = 786.0
+offset_bottom = 689.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_q768o")
-expand_mode = 2
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_bn1fd")
 
 [node name="bar" type="Button" parent="."]
 layout_mode = 0
-offset_right = 704.0
-offset_bottom = 28.0
+offset_left = 229.0
+offset_top = -39.0
+offset_right = 566.0
+offset_bottom = 3.0
 focus_mode = 0
 keep_pressed_outside = true
 flat = true
@@ -64,11 +68,11 @@ flat = true
 [node name="CloseButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 671.0
-offset_top = 4.9999995
-offset_right = 711.0
-offset_bottom = 45.0
-scale = Vector2(0.7, 0.7)
+offset_left = 566.0
+offset_top = -26.0
+offset_right = 606.0
+offset_bottom = 14.0
+scale = Vector2(0.47, 0.47)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 focus_mode = 0
@@ -79,10 +83,10 @@ script = ExtResource("4_20xb2")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 58.0
-offset_right = 674.0
-offset_bottom = 402.0
+offset_left = 232.0
+offset_top = 31.0
+offset_right = 572.0
+offset_bottom = 433.0
 theme = SubResource("Theme_mvrfa")
 theme_override_colors/caret_color = Color(0.14961773, 0.002651523, 0.24577913, 1)
 theme_override_colors/font_color = Color(0.25738078, 0.0004323826, 0.37767172, 1)
@@ -90,6 +94,7 @@ theme_override_fonts/font = ExtResource("5_bn1fd")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fh4ba")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_20xb2")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_tambi")
+wrap_mode = 1
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]
