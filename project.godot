@@ -18,6 +18,7 @@ config/icon="res://assets/icons/icon.svg"
 [autoload]
 
 SignalBus="*res://scripts/SignalBus.cs"
+Music="*res://scenes/music.tscn"
 
 [display]
 

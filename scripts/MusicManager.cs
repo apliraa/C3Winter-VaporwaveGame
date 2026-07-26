@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class MusicManager : AudioStreamPlayer2D
+public partial class MusicManager : Node2D
 {
 	public static MusicManager Instance;
 	
@@ -11,15 +11,19 @@ public partial class MusicManager : AudioStreamPlayer2D
 	public override void _Ready()
 	{
 		Instance = this;
+		main.Finished += PlayMainTrack;
+		reset.Finished += PlayResetTrack;
 	}
 
 	public void PlayMainTrack()
 	{
+		reset.Stop();
 		main.Play();
 	}
 
 	public void PlayResetTrack()
 	{
+		main.Stop();
 		reset.Play();
 	}
 

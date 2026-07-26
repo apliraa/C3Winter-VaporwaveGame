@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dldvh4gp7yfbu"]
+
+[ext_resource type="Script" uid="uid://dx2v55ebj01qj" path="res://scripts/MusicButton.cs" id="1_f1qrw"]
+[ext_resource type="Texture2D" uid="uid://2xv5xl1ff4y0" path="res://assets/icons/music-icons.png" id="1_wgvpo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1qrw"]
+atlas = ExtResource("1_wgvpo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quhgm"]
+atlas = ExtResource("1_wgvpo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jabkc"]
+atlas = ExtResource("1_wgvpo")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifgmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1qrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quhgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jabkc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="MusicButton" type="Node2D" node_paths=PackedStringArray("as2d")]
+z_index = 200
+script = ExtResource("1_f1qrw")
+as2d = NodePath("AnimatedSprite2D")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 20)
+sprite_frames = SubResource("SpriteFrames_ifgmr")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

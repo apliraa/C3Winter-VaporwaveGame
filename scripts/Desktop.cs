@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public partial class Desktop : Control
 {
-	[Export] private TextureRect wallpaper;
+	[Export] private Sprite2D melt;
 	[Export] private Sprite2D gradient;
 
 	public void StartCorruption(int time)
@@ -24,8 +24,8 @@ public partial class Desktop : Control
 	{
 		Tween t = CreateTween();
 
-		if (wallpaper.Material is ShaderMaterial s)
-			t.TweenProperty(s,"shader_parameter/progress",1,15).Connect("finished",Callable.From(CorruptionCompleted));
+		if (melt.Material is ShaderMaterial s)
+			t.TweenProperty(s,"shader_parameter/progress",1,5).Connect("finished",Callable.From(CorruptionCompleted));
 	}
 
 	private void CorruptionCompleted()
