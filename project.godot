@@ -19,6 +19,7 @@ config/icon="res://assets/icons/icon.svg"
 
 SignalBus="*res://scripts/SignalBus.cs"
 Music="*res://scenes/music.tscn"
+SaveManager="*res://scripts/SaveManager.cs"
 
 [display]
 

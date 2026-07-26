@@ -21,7 +21,8 @@ public partial class NewWindow : Control
 			GlobalPosition = initWindowPosit + GetGlobalMousePosition() - initMousePosit;
 		
 	}
-	public void _on_close_button_pressed(){
+	
+	public virtual void _on_close_button_pressed(){
 		CallDeferred("free");
 		
 	}

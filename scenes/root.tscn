@@ -27,7 +27,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kycxp")
-time = 10
+time = 99999
 desktop = NodePath("desktop")
 
 [node name="Timer" type="Timer" parent="."]

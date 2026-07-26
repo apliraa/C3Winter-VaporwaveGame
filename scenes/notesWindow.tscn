@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://db0hyw3xeksj3"]
 
-[ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_q768o"]
+[ext_resource type="Script" uid="uid://bfso3x8gmsi2y" path="res://scripts/NotePadSave.cs" id="1_bn1fd"]
 [ext_resource type="Texture2D" uid="uid://c02qkndext7kl" path="res://assets/screens/bloco_de_notas_V2.png" id="2_bn1fd"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_fh4ba"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_20xb2"]
@@ -29,7 +29,7 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_s08b1")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tambi"]
 
-[node name="notesWindow" type="Control"]
+[node name="notesWindow" type="Control" node_paths=PackedStringArray("textEdit")]
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
@@ -37,7 +37,8 @@ offset_left = 500.0
 offset_top = 164.0
 offset_right = 500.0
 offset_bottom = 164.0
-script = ExtResource("1_q768o")
+script = ExtResource("1_bn1fd")
+textEdit = NodePath("TextEdit")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
