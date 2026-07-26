@@ -6,7 +6,7 @@ public partial class NotePadSave : NewWindow
 	[Export] TextEdit textEdit;
 	public override void _on_close_button_pressed()
 	{
-		SaveManager.Instance.notePadData = textEdit.Text;
+		
 		CallDeferred("free");
 	}
 
@@ -14,5 +14,11 @@ public partial class NotePadSave : NewWindow
 	{
 		textEdit.Text = SaveManager.Instance.notePadData;
 		base._Ready();
+	}
+	
+	public override void _Process(double delta){
+		if (draging)
+			GlobalPosition = initWindowPosit + GetGlobalMousePosition() - initMousePosit;
+		SaveManager.Instance.notePadData = textEdit.Text;
 	}
 }

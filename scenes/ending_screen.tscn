@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5byxlyemwuj1"]
+
+[ext_resource type="Script" uid="uid://dmao73yaerxp8" path="res://scripts/EndingScreen.cs" id="1_4vp0n"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="1_61pod"]
+
+[node name="endingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4vp0n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.5
+offset_top = -142.0
+offset_right = 578.5
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_61pod")
+theme_override_font_sizes/font_size = 40
+text = "Assim que a ligação finalizou, viaturas foram enviadas e 
+o criminoso, Júlio Batista, foi achado e preso pelos seus crimes.
+
+O bunker e o terreno foram interditados e mais investigações foram iniciadas
+
+No final do dia, mais um caso foi solucionado pelo grande detetive Cesare Martinez!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

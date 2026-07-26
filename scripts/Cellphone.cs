@@ -6,7 +6,8 @@ using System.Linq;
 public partial class Cellphone : Control
 {
 
-	private List<string> Answears = new List<string> { "Julio Batista", "Veneno", "Envenenamento", "00:00", "Bunker" };
+	private List<string> Answears = new List<string> 
+	{ "Júlio Batista", "Veneno", "Envenenamento", "00:00", "Bunker" };
 
 	private List<string> Dialogue = new List<string>
 	{
@@ -46,7 +47,7 @@ public partial class Cellphone : Control
 		telaIdle.Show();
 
 		if (wordsRight.SequenceEqual(Answears))
-			GD.Print("Todas as respostas corretas");
+			GetTree().ChangeSceneToFile("res://scenes/ending_screen.tscn");
 
 		currIndex = 0;
 		wordsRight = [];

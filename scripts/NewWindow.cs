@@ -4,10 +4,10 @@ using System;
 public partial class NewWindow : Control
 {
 
-	private Vector2 initMousePosit;
-	private Vector2 initWindowPosit;
+	public Vector2 initMousePosit;
+	public Vector2 initWindowPosit;
 
-	private bool draging;
+	public bool draging;
 
 	public override void _Ready()
 	{
