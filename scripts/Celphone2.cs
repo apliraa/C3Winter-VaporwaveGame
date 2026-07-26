@@ -4,19 +4,16 @@ using System;
 public partial class Celphone2 : Control
 {
 	[Export] Marker2D PhoneMarker;
+
+	[Export] private Cellphone telaChamado;
 	bool isOut;
 	Vector2 initialPosition;
 	public override void _Ready()
 	{
 		initialPosition =  GlobalPosition;
-		
-		
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+
 	public void _on_button_pressed(){
 
 		if(PhoneMarker == null) return;
@@ -34,7 +31,13 @@ public partial class Celphone2 : Control
 		}
 		isOut = !isOut;
 		
-		}
-		
 	}
+
+	public void _on_call_pressed()
+	{
+		Hide();
+		telaChamado.Show();
+	}
+		
+}
 	
