@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://trng17ev7puu"]
+
+[ext_resource type="Texture2D" uid="uid://dmx8v0pcvhifj" path="res://assets/screens/atendendo.png" id="1_q8ltf"]
+[ext_resource type="Script" uid="uid://861nrt7nt0k3" path="res://scripts/Cellphone.cs" id="2_a5qso"]
+
+[node name="celular_chamado" type="TextureRect" node_paths=PackedStringArray("labelDialogue", "campoTexto")]
+offset_right = 305.0
+offset_bottom = 508.333
+texture = ExtResource("1_q8ltf")
+script = ExtResource("2_a5qso")
+labelDialogue = NodePath("Label")
+campoTexto = NodePath("LineEdit")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = 27.833496
+offset_right = 91.5
+offset_bottom = 58.833557
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "..."
+alignment = 1
+clear_button_enabled = true
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -83.166504
+offset_right = 122.5
+offset_bottom = -51.499817
+grow_horizontal = 2
+grow_vertical = 2
+text = "Qual o nome dele?"
+horizontal_alignment = 1
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
