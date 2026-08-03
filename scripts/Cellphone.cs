@@ -5,25 +5,29 @@ using System.Linq;
 
 public partial class Cellphone : Control
 {
-
-	private List<string> Answears = new List<string> 
-	{ "Júlio Batista", "Veneno", "Envenenamento", "00:00", "Bunker" };
+	private List<List<string>> Answears = new List<List<string>> 
+	{ 
+		new List<string>{"Júlio Batista", "Julio Batista"}, 
+		new List<string>{"Toxina", "Veneno"},
+		new List<string>{"Envenenamento"},
+		new List<string>{"00:00", "Meia Noite", "0000"},
+		new List<string>{"Bunker"}
+	};
 
 	private List<string> Dialogue = new List<string>
 	{
 		"Qual o nome do assassino?",
-		"Qual a arma utilizada no crime?",
+		"Qual a arma do crime?",
 		"Qual a causa da morte?",
-		"Qual o horário do ocorrido?:",
-		"Onde o corpo foi encontrado?",
-	
+		"Qual o horário do ocorrido?",
+		"Onde o corpo foi encontrado?"
 	};
 
-	private List<string> wordsRight = [];
+	private List<string> wordsRight = new List<string>();
+	
 	[Export] private RichTextLabel labelDialogue;
 	[Export] private LineEdit campoTexto;
-	
-	[Export] private Celphone2 telaIdle;
+	[Export] private Celphone2 telaIdle; 
 
 	private int currIndex = -1;
 
@@ -32,12 +36,21 @@ public partial class Cellphone : Control
 		UpdateDialogue();
 	}
 	
-
 	public void _on_line_edit_text_submitted(string newDialogue)
 	{
 		campoTexto.Text = "";
-		if (wordsRight.Count >= Answears.Count) return;
-		if (newDialogue.ToLower() == Answears[currIndex].ToLower()) wordsRight.Add(Answears[currIndex]);
+		
+		if (currIndex >= Answears.Count) return;
+
+		string respostaJogador = newDialogue.ToLower().Trim();
+
+		bool respostaCorreta = Answears[currIndex].Any(respostaValida => respostaValida.ToLower().Trim() == respostaJogador);
+
+		if (respostaCorreta) 
+		{
+			wordsRight.Add(respostaJogador);
+		}
+		
 		UpdateDialogue();
 	}
 
@@ -46,18 +59,21 @@ public partial class Cellphone : Control
 		Hide();
 		telaIdle.Show();
 
-		if (wordsRight.SequenceEqual(Answears))
+		if (wordsRight.Count == Answears.Count)
+		{
 			GetTree().ChangeSceneToFile("res://scenes/ending_screen.tscn");
+		}
 
-		currIndex = 0;
-		wordsRight = [];
+	
+		currIndex = -1; 
+		wordsRight.Clear();
 	}
 
 	private void UpdateDialogue()
 	{
 		currIndex++;
 
-		if (currIndex == 5)
+		if (currIndex >= Dialogue.Count)
 		{
 			verifyAnswers();
 			return;
@@ -65,5 +81,4 @@ public partial class Cellphone : Control
 
 		labelDialogue.Text = Dialogue[currIndex];
 	}
-
 }

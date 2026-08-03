@@ -134,7 +134,6 @@ windowTeste = ExtResource("17_ya6yc")
 [node name="Celphone" parent="." instance=ExtResource("17_gt4lb")]
 z_index = 200
 layout_mode = 1
-anchors_preset = 0
 grow_horizontal = 1
 grow_vertical = 1
 
