@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8meh1o8aug5x"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_nf204"]
-[ext_resource type="Texture2D" uid="uid://bphawhnsanfng" path="res://assets/screens/Tela_Lixeira_Vazia.png" id="2_nf204"]
+[ext_resource type="Texture2D" uid="uid://cgqsqmkbfpt1e" path="res://assets/screens/Tela_Lixeira_Cheia.png" id="2_nf204"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_y2t1h"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_33mbo"]
 

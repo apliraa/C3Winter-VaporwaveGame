@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://trng17ev7puu"]
 
-[ext_resource type="Texture2D" uid="uid://dmx8v0pcvhifj" path="res://assets/screens/atendendo.png" id="1_q8ltf"]
+[ext_resource type="Texture2D" uid="uid://l6ua2lmahpgo" path="res://assets/screens/atendendo_V2.png" id="1_a5qso"]
 [ext_resource type="Script" uid="uid://861nrt7nt0k3" path="res://scripts/Cellphone.cs" id="2_a5qso"]
 
 [node name="celular_chamado" type="TextureRect" node_paths=PackedStringArray("labelDialogue", "campoTexto")]
 offset_right = 305.0
 offset_bottom = 508.333
-texture = ExtResource("1_q8ltf")
+texture = ExtResource("1_a5qso")
 script = ExtResource("2_a5qso")
 labelDialogue = NodePath("Label")
 campoTexto = NodePath("LineEdit")
