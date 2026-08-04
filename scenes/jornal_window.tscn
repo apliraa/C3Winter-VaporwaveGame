@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://hnuyyt2ngg0n" path="res://assets/screens/Tela Documentos.png" id="2_ub7i7"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_6a7yy"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_iqqod"]
-[ext_resource type="Texture2D" uid="uid://cy1xdsy2dt3q5" path="res://assets/screens/jornal.png" id="5_5g1pp"]
+[ext_resource type="Texture2D" uid="uid://dcltsp36w846y" path="res://assets/screens/jornal_menor.png" id="5_v8cib"]
 
 [node name="JornalWindow" type="Control"]
 z_index = 6
@@ -23,6 +23,8 @@ anchor_left = 0.35546875
 anchor_top = 0.175
 anchor_right = 0.9110243
 anchor_bottom = 0.73055553
+offset_left = -79.9978
+offset_top = -51.0
 offset_right = 709.0
 offset_bottom = 452.0
 grow_horizontal = 2
@@ -32,18 +34,20 @@ expand_mode = 2
 
 [node name="bar" type="Button" parent="."]
 layout_mode = 0
-offset_right = 696.0
-offset_bottom = 28.0
+offset_left = -80.0
+offset_top = -48.0
+offset_right = 705.0
+offset_bottom = -4.0
 focus_mode = 0
 keep_pressed_outside = true
 flat = true
 
 [node name="CloseButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 669.0
-offset_top = 6.0
-offset_right = 709.0
-offset_bottom = 46.0
+offset_left = 661.0
+offset_top = -47.000008
+offset_right = 715.28577
+offset_bottom = 7.285759
 scale = Vector2(0.7, 0.7)
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -55,12 +59,12 @@ script = ExtResource("4_iqqod")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -9.0
-offset_top = 67.0
-offset_right = 4677.667
-offset_bottom = 2627.0
+offset_left = -93.21358
+offset_top = 22.000015
+offset_right = 5154.8774
+offset_bottom = 2888.6665
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("5_5g1pp")
+texture = ExtResource("5_v8cib")
 stretch_mode = 5
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]

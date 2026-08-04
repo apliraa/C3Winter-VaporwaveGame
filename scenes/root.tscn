@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=24 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dw2lnqefk5fdp" path="res://scenes/celphone.tscn" id="17_gt4lb"]
 [ext_resource type="PackedScene" uid="uid://dvfjvnhf4t4ca" path="res://scenes/recibo_window.tscn" id="17_ya6yc"]
 [ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/icons/Arquivo_Aberto_Hover.png" id="18_34frw"]
+[ext_resource type="PackedScene" uid="uid://uypvy56udprd" path="res://scenes/imagemRosa.tscn" id="18_f3p2p"]
 [ext_resource type="PackedScene" uid="uid://bt23r4ck1tyse" path="res://scenes/pastaNaoLeuWindow.tscn" id="19_8ui5n"]
 
 [node name="root" type="Control" node_paths=PackedStringArray("desktop")]
@@ -39,12 +40,13 @@ desktop = NodePath("desktop")
 [node name="AppManager" type="Node2D" parent="." node_paths=PackedStringArray("apps", "arquivos")]
 script = ExtResource("2_log26")
 apps = [NodePath("../MSN"), NodePath("../NAV"), NodePath("../EMAIL"), NodePath("../LIXO")]
-arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL"), NodePath("../PASTA")]
+arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL"), NodePath("../PASTA"), NodePath("../IMAGEM")]
 
 [node name="desktop" parent="." instance=ExtResource("2_dylgi")]
 layout_mode = 1
 
 [node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -65,6 +67,7 @@ theme_override_fonts/font = ExtResource("7_mflgo")
 text = "Bate-Papo "
 
 [node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -86,6 +89,7 @@ theme_override_fonts/font = ExtResource("7_mflgo")
 text = "UNAV"
 
 [node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 250.0
@@ -128,6 +132,7 @@ theme_override_fonts/font = ExtResource("7_mflgo")
 text = "Notas"
 
 [node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 1050.0
@@ -149,6 +154,7 @@ theme_override_fonts/font = ExtResource("7_mflgo")
 text = "Lixeira"
 
 [node name="JORNAL" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 328.0
@@ -169,7 +175,30 @@ offset_bottom = 74.0
 theme_override_fonts/font = ExtResource("7_mflgo")
 text = "jornal.pdf"
 
+[node name="IMAGEM" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 330.0
+offset_top = 505.0
+offset_right = 390.0
+offset_bottom = 565.0
+focus_mode = 0
+texture_normal = ExtResource("14_vgks2")
+stretch_mode = 5
+windowTeste = ExtResource("18_f3p2p")
+
+[node name="Label" type="Label" parent="IMAGEM"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 55.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "rosa.png"
+
 [node name="PASTA" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -191,6 +220,7 @@ theme_override_fonts/font = ExtResource("7_mflgo")
 text = "Não Leu?"
 
 [node name="RECIBO" parent="." instance=ExtResource("3_lrqlo")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 248.0

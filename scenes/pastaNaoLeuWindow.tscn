@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt23r4ck1tyse"]
+[gd_scene load_steps=16 format=3 uid="uid://bt23r4ck1tyse"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_ce6aj"]
 [ext_resource type="Texture2D" uid="uid://hnuyyt2ngg0n" path="res://assets/screens/Tela Documentos.png" id="2_n1cb7"]
@@ -6,8 +6,15 @@
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_25udh"]
 [ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="5_25udh"]
 [ext_resource type="Texture2D" uid="uid://dg6c41e1ia8tq" path="res://assets/icons/Papel1.png" id="6_h44pu"]
-[ext_resource type="PackedScene" uid="uid://q752a2m6cles" path="res://scenes/credits_windowOne.tscn" id="7_10j81"]
+[ext_resource type="PackedScene" uid="uid://bjmyrntwep0im" path="res://scenes/pastaCena1.tscn" id="7_xgrxu"]
 [ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="8_1bnvb"]
+[ext_resource type="PackedScene" uid="uid://bepi67c1ngpbh" path="res://scenes/pastaCena2DOIS.tscn" id="9_rrcqr"]
+[ext_resource type="PackedScene" uid="uid://cs12ntpo5uutj" path="res://scenes/pastaCena3TRES.tscn" id="10_ofrxi"]
+[ext_resource type="PackedScene" uid="uid://uaqo6fh5xush" path="res://scenes/pastaCena4.tscn" id="11_jmykn"]
+[ext_resource type="PackedScene" uid="uid://c8fpj8tlllbec" path="res://scenes/pastaCena5.tscn" id="12_16i7v"]
+[ext_resource type="PackedScene" uid="uid://dseo1fb1xn6wg" path="res://scenes/pastaCena6.tscn" id="13_61fgt"]
+[ext_resource type="PackedScene" uid="uid://v1kg8o2wi40c" path="res://scenes/pastaCena7.tscn" id="14_r6f0w"]
+[ext_resource type="PackedScene" uid="uid://dw6mncmdtqjrb" path="res://scenes/pastaCena8.tscn" id="15_jg5wl"]
 
 [node name="pastaCutscene" type="Control"]
 z_index = 6
@@ -72,7 +79,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("7_xgrxu")
 
 [node name="cena1" type="Label" parent="GridContainer/cena1"]
 layout_mode = 0
@@ -90,7 +97,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("9_rrcqr")
 
 [node name="cena2" type="Label" parent="GridContainer/cena2"]
 layout_mode = 0
@@ -108,7 +115,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("10_ofrxi")
 
 [node name="cena3" type="Label" parent="GridContainer/cena3"]
 layout_mode = 0
@@ -126,7 +133,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("11_jmykn")
 
 [node name="cena4" type="Label" parent="GridContainer/cena4"]
 layout_mode = 0
@@ -144,7 +151,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("12_16i7v")
 
 [node name="cena5" type="Label" parent="GridContainer/cena5"]
 layout_mode = 0
@@ -162,7 +169,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("13_61fgt")
 
 [node name="cena6" type="Label" parent="GridContainer/cena6"]
 layout_mode = 0
@@ -180,7 +187,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("14_r6f0w")
 
 [node name="cena7" type="Label" parent="GridContainer/cena7"]
 layout_mode = 0
@@ -198,7 +205,7 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_h44pu")
 stretch_mode = 5
-windowTeste = ExtResource("7_10j81")
+windowTeste = ExtResource("15_jg5wl")
 
 [node name="cena8" type="Label" parent="GridContainer/cena8"]
 layout_mode = 0
