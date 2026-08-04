@@ -33,10 +33,10 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_s08b1")
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
-offset_left = 500.0
-offset_top = 164.0
-offset_right = 500.0
-offset_bottom = 164.0
+offset_left = 244.0
+offset_top = 142.0
+offset_right = 244.0
+offset_bottom = 142.0
 script = ExtResource("1_bn1fd")
 textEdit = NodePath("TextEdit")
 

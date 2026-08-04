@@ -9,10 +9,10 @@
 z_index = 7
 layout_mode = 3
 anchors_preset = 0
-offset_left = 65.0
-offset_top = 108.0
-offset_right = 65.0
-offset_bottom = 108.0
+offset_left = 492.0
+offset_top = 133.0
+offset_right = 492.0
+offset_bottom = 133.0
 script = ExtResource("1_qods4")
 
 [node name="TextureRect" type="TextureRect" parent="."]

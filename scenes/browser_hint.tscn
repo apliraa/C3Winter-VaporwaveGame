@@ -10,6 +10,10 @@ show_behind_parent = true
 z_index = 7
 layout_mode = 3
 anchors_preset = 0
+offset_left = 257.0
+offset_top = 126.0
+offset_right = 257.0
+offset_bottom = 126.0
 script = ExtResource("1_4sgfw")
 
 [node name="TextureRect" type="TextureRect" parent="."]

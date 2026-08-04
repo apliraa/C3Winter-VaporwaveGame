@@ -38,10 +38,10 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_t52u2")
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
-offset_left = 500.0
-offset_top = 164.0
-offset_right = 500.0
-offset_bottom = 164.0
+offset_left = 315.0
+offset_top = 136.0
+offset_right = 315.0
+offset_bottom = 136.0
 script = ExtResource("1_gfhfj")
 
 [node name="TextureRect" type="TextureRect" parent="."]

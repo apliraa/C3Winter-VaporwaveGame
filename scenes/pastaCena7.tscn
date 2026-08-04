@@ -10,10 +10,10 @@
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
-offset_left = 500.0
-offset_top = 164.0
-offset_right = 500.0
-offset_bottom = 164.0
+offset_left = 261.0
+offset_top = 126.0
+offset_right = 261.0
+offset_bottom = 126.0
 script = ExtResource("1_i2g43")
 
 [node name="TextureRect" type="TextureRect" parent="."]
