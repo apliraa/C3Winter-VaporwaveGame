@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bwpcntty6uqeh"]
+[gd_scene load_steps=23 format=3 uid="uid://bwpcntty6uqeh"]
 
 [ext_resource type="Script" uid="uid://qbor7xt8aary" path="res://scripts/Root.cs" id="1_kycxp"]
 [ext_resource type="PackedScene" uid="uid://br3nunl447drb" path="res://scenes/desktop.tscn" id="2_dylgi"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b2v4nts1sxtce" path="res://scenes/MSNWindow.tscn" id="5_7pvxh"]
 [ext_resource type="PackedScene" uid="uid://8meh1o8aug5x" path="res://scenes/trashWindow.tscn" id="5_y3xxt"]
 [ext_resource type="Texture2D" uid="uid://cfrky7ci84o0o" path="res://assets/icons/Bloco_Notas1.png" id="6_7pvxh"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="7_mflgo"]
 [ext_resource type="Texture2D" uid="uid://crjhtosd0f7pp" path="res://assets/icons/Lixeira_Vazia1.png" id="7_y3xxt"]
 [ext_resource type="PackedScene" uid="uid://cphspbwwuvjig" path="res://scenes/emailWindow.tscn" id="8_7pvxh"]
 [ext_resource type="PackedScene" uid="uid://slgdo8gveesj" path="res://scenes/browserWindow.tscn" id="9_l5cgh"]
@@ -19,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://wwmwrnipqxba" path="res://scenes/jornal_window.tscn" id="16_ya6yc"]
 [ext_resource type="PackedScene" uid="uid://dw2lnqefk5fdp" path="res://scenes/celphone.tscn" id="17_gt4lb"]
 [ext_resource type="PackedScene" uid="uid://dvfjvnhf4t4ca" path="res://scenes/recibo_window.tscn" id="17_ya6yc"]
+[ext_resource type="Texture2D" uid="uid://cks1tyw4fc7yu" path="res://assets/icons/Arquivo_Aberto_Hover.png" id="18_34frw"]
+[ext_resource type="PackedScene" uid="uid://bt23r4ck1tyse" path="res://scenes/pastaNaoLeuWindow.tscn" id="19_8ui5n"]
 
 [node name="root" type="Control" node_paths=PackedStringArray("desktop")]
 layout_mode = 3
@@ -36,13 +39,12 @@ desktop = NodePath("desktop")
 [node name="AppManager" type="Node2D" parent="." node_paths=PackedStringArray("apps", "arquivos")]
 script = ExtResource("2_log26")
 apps = [NodePath("../MSN"), NodePath("../NAV"), NodePath("../EMAIL"), NodePath("../LIXO")]
-arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL")]
+arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL"), NodePath("../PASTA")]
 
 [node name="desktop" parent="." instance=ExtResource("2_dylgi")]
 layout_mode = 1
 
 [node name="MSN" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -54,8 +56,15 @@ texture_normal = ExtResource("4_3hfy5")
 stretch_mode = 5
 windowTeste = ExtResource("5_7pvxh")
 
+[node name="Label" type="Label" parent="MSN"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 64.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "Bate-Papo "
+
 [node name="NAV" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 170.0
@@ -67,8 +76,16 @@ texture_normal = ExtResource("9_vgks2")
 stretch_mode = 5
 windowTeste = ExtResource("9_l5cgh")
 
+[node name="Label" type="Label" parent="NAV"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 61.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "UNAV"
+
 [node name="EMAIL" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 250.0
@@ -79,6 +96,15 @@ focus_mode = 0
 texture_normal = ExtResource("5_3hfy5")
 stretch_mode = 5
 windowTeste = ExtResource("8_7pvxh")
+
+[node name="Label" type="Label" parent="EMAIL"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 61.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "Email"
 
 [node name="NOTAS" parent="." instance=ExtResource("3_lrqlo")]
 custom_minimum_size = Vector2(60, 60)
@@ -92,8 +118,16 @@ texture_normal = ExtResource("6_7pvxh")
 stretch_mode = 5
 windowTeste = ExtResource("13_vgks2")
 
+[node name="Label" type="Label" parent="NOTAS"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 61.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "Notas"
+
 [node name="LIXO" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 1050.0
@@ -105,8 +139,16 @@ texture_normal = ExtResource("7_y3xxt")
 stretch_mode = 5
 windowTeste = ExtResource("5_y3xxt")
 
+[node name="Label" type="Label" parent="LIXO"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 61.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "Lixeira"
+
 [node name="JORNAL" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 328.0
@@ -118,8 +160,37 @@ texture_normal = ExtResource("14_vgks2")
 stretch_mode = 5
 windowTeste = ExtResource("16_ya6yc")
 
+[node name="Label" type="Label" parent="JORNAL"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 55.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "jornal.pdf"
+
+[node name="PASTA" parent="." instance=ExtResource("3_lrqlo")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 170.0
+offset_top = 425.0
+offset_right = 230.0
+offset_bottom = 485.0
+focus_mode = 0
+texture_normal = ExtResource("18_34frw")
+stretch_mode = 5
+windowTeste = ExtResource("19_8ui5n")
+
+[node name="Label" type="Label" parent="PASTA"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 55.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "Não Leu?"
+
 [node name="RECIBO" parent="." instance=ExtResource("3_lrqlo")]
-visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 248.0
@@ -130,6 +201,15 @@ focus_mode = 0
 texture_normal = ExtResource("14_vgks2")
 stretch_mode = 5
 windowTeste = ExtResource("17_ya6yc")
+
+[node name="Label" type="Label" parent="RECIBO"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 57.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_mflgo")
+text = "recibo.pdf"
 
 [node name="Celphone" parent="." instance=ExtResource("17_gt4lb")]
 z_index = 200

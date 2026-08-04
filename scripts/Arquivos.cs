@@ -5,12 +5,19 @@ public partial class Arquivos : TextureButton
 {
 
 	[Export] private PackedScene windowTeste;
+	//[Export] private Label appName;
+	//
+	//[Export(PropertyHint.MultilineText)] 
+	//public string AppNameRoot = "appName";
+
+	
 
 	private bool selected;
 
 	public override void _Ready()
 	{
 		SignalBus.Instance.AppSelected += Unselect;
+		//appName.Text = AppNameRoot;
 	}
 
 	public void _on_pressed()

@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://8meh1o8aug5x"]
+[gd_scene load_steps=11 format=3 uid="uid://8meh1o8aug5x"]
 
 [ext_resource type="Script" uid="uid://cb213wyuxxj4k" path="res://scripts/NewWindow.cs" id="1_nf204"]
 [ext_resource type="Texture2D" uid="uid://cgqsqmkbfpt1e" path="res://assets/screens/Tela_Lixeira_Cheia.png" id="2_nf204"]
 [ext_resource type="Texture2D" uid="uid://cwaeee0x21rs1" path="res://assets/icons/Botão_Fechar.png" id="3_y2t1h"]
 [ext_resource type="Script" uid="uid://8vq5qqs0vnio" path="res://scripts/CloseButton.cs" id="4_33mbo"]
+[ext_resource type="PackedScene" uid="uid://44rwpvg31q77" path="res://scenes/app.tscn" id="5_y2t1h"]
+[ext_resource type="Texture2D" uid="uid://dg6c41e1ia8tq" path="res://assets/icons/Papel1.png" id="6_33mbo"]
+[ext_resource type="FontFile" uid="uid://bcjh7nl3qoyo6" path="res://assets/fonts/Pixelbasel.ttf" id="7_33mbo"]
+[ext_resource type="PackedScene" uid="uid://q752a2m6cles" path="res://scenes/credits_windowOne.tscn" id="7_utcqy"]
+[ext_resource type="PackedScene" uid="uid://b20u0jiwkp31g" path="res://scenes/credits_windowTwo.tscn" id="9_7l06x"]
+[ext_resource type="PackedScene" uid="uid://wdqdkm5wog0t" path="res://scenes/credits_windowThree.tscn" id="10_och5t"]
 
 [node name="trashWindow" type="Control"]
 z_index = 6
@@ -52,6 +58,70 @@ icon = ExtResource("3_y2t1h")
 flat = true
 icon_alignment = 1
 script = ExtResource("4_33mbo")
+
+[node name="ratosButton" parent="." instance=ExtResource("5_y2t1h")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 164.0
+offset_top = 76.0
+offset_right = 224.0
+offset_bottom = 136.0
+focus_mode = 0
+texture_normal = ExtResource("6_33mbo")
+stretch_mode = 5
+windowTeste = ExtResource("7_utcqy")
+
+[node name="ratos" type="Label" parent="ratosButton"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 62.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 0.18039216, 0.6039216, 1)
+theme_override_fonts/font = ExtResource("7_33mbo")
+text = "ratos.txt"
+
+[node name="bardosButton2" parent="." instance=ExtResource("5_y2t1h")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 76.0
+offset_right = 312.0
+offset_bottom = 136.0
+focus_mode = 0
+texture_normal = ExtResource("6_33mbo")
+stretch_mode = 5
+windowTeste = ExtResource("9_7l06x")
+
+[node name="ratos" type="Label" parent="bardosButton2"]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 63.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 0.18039216, 0.6039216, 1)
+theme_override_fonts/font = ExtResource("7_33mbo")
+text = "bardos.png"
+
+[node name="timbusButton3" parent="." instance=ExtResource("5_y2t1h")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 340.0
+offset_top = 76.0
+offset_right = 400.0
+offset_bottom = 136.0
+focus_mode = 0
+texture_normal = ExtResource("6_33mbo")
+stretch_mode = 5
+windowTeste = ExtResource("10_och5t")
+
+[node name="ratos" type="Label" parent="timbusButton3"]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 60.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(1, 0.18039216, 0.6039216, 1)
+theme_override_fonts/font = ExtResource("7_33mbo")
+text = "footprint.png"
 
 [connection signal="button_down" from="bar" to="." method="_on_bar_button_down"]
 [connection signal="button_up" from="bar" to="." method="_on_bar_button_up"]

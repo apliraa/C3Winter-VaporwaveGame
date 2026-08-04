@@ -19,5 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NewWindow" parent="." instance=ExtResource("3_mku72")]
+layout_mode = 0
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

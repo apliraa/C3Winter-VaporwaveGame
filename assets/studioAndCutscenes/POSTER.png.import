@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crs8hjjmo5ec8"
-path="res://.godot/imported/Cema_4.png-95695308fe9eb58a12b98d23f1ec6524.ctex"
+uid="uid://daawdnq2rxv6h"
+path="res://.godot/imported/POSTER.png-34e5501cdf2502179d72242e35745ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/studioAndCutscenes/Cema_4.png"
-dest_files=["res://.godot/imported/Cema_4.png-95695308fe9eb58a12b98d23f1ec6524.ctex"]
+source_file="res://assets/studioAndCutscenes/POSTER.png"
+dest_files=["res://.godot/imported/POSTER.png-34e5501cdf2502179d72242e35745ac7.ctex"]
 
 [params]
 
