@@ -1,16 +1,31 @@
 using Godot;
 using System;
 
-public partial class InitialScreen : VideoStreamPlayer
+public partial class InitialScreen : Control
 {
-	public void _on_finished(){
-		GetTree().ChangeSceneToFile("res://scenes/TelaInicial.tscn");
+	private AnimationPlayer switcher;
+	private bool waitingInput = false;
+
+	public override void _Ready()
+	{
+		switcher = GetNode<AnimationPlayer>("Switcher");
+		
+		switcher.Play("logoCutscene");
 	}
-	
-	public override void _Process(double delta){
-		if(Input.IsActionJustPressed("ui_accept")||Input.IsActionJustPressed("ui_right")){
-		 	GetTree().ChangeSceneToFile("res://scenes/TelaInicial.tscn");
+
+	public void PausarParaInput()
+{
+	switcher.Pause(); 
+	waitingInput = true;
+}
+
+	public override void _Input(InputEvent @event)
+	{
+		if (waitingInput && @event.IsActionPressed("ui_accept"))
+		{
+			waitingInput = false;
+			
+			switcher.Play(); 
 		}
 	}
-	
 }

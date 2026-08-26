@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b05ff2watqm04"]
 
-[ext_resource type="VideoStream" uid="uid://npsy0a1p5f0t" path="res://assets/videos/Cena_2.ogv" id="2_1exgo"]
 [ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_6ybww"]
 [ext_resource type="Script" uid="uid://fq4abedxy1yg" path="res://scripts/TelaInicial.cs" id="2_17ume"]
+[ext_resource type="Texture2D" uid="uid://bni17a8tymve6" path="res://assets/screens/tela ligada (carregando) (1).png" id="3_1exgo"]
 [ext_resource type="Texture2D" uid="uid://bckfpu6ghu735" path="res://assets/icons/Botão_ligado.png" id="4_1exgo"]
 [ext_resource type="PackedScene" uid="uid://dldvh4gp7yfbu" path="res://scenes/music_button.tscn" id="5_1exgo"]
 
@@ -13,30 +13,24 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_17ume")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-z_index = 300
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 30.715002
-anchor_top = 16.972
-anchor_right = 31.846
-anchor_bottom = 17.954
-offset_left = -1090.6001
-offset_top = -600.88
-offset_right = -132.84009
-offset_bottom = -76.160034
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("2_1exgo")
-speed_scale = 2.0
-expand = true
-
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="MolduraPC" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1281.0
 offset_bottom = 720.0
 texture = ExtResource("2_6ybww")
 metadata/_edit_use_anchors_ = true
+
+[node name="ligandoPC" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CarregandoPC" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_1exgo")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -48,6 +42,8 @@ scale = Vector2(0.5, 0.5)
 focus_mode = 0
 icon = ExtResource("4_1exgo")
 flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="music buttons" type="Node2D" parent="."]
 
@@ -62,5 +58,4 @@ buttonType = 1
 position = Vector2(531, 686)
 buttonType = 2
 
-[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
