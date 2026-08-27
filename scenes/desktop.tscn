@@ -44,8 +44,8 @@ texture = ExtResource("1_81rff")
 layout_mode = 0
 offset_left = 138.0
 offset_top = 78.0
-offset_right = 1142.0
-offset_bottom = 644.0
+offset_right = 1143.7739
+offset_bottom = 645.0
 texture = ExtResource("3_dcrhm")
 
 [node name="color shift" type="Sprite2D" parent="."]

@@ -21,11 +21,16 @@ public partial class InitialScreen : Control
 
 	public override void _Input(InputEvent @event)
 	{
-		if (waitingInput && @event.IsActionPressed("ui_accept"))
+		if (waitingInput && @event.IsActionPressed("aceitar"))
 		{
 			waitingInput = false;
 			
 			switcher.Play(); 
 		}
 	}
+	
+	public void changeToGame(){
+		GetTree().ChangeSceneToFile("res://scenes/TelaInicial.tscn");
+	}
+	
 }

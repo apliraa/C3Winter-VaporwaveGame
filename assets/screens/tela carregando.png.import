@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v82wklmowtim"
-path="res://.godot/imported/Tela ligando.png-e87c89aab5dd0b2e65b31aac48795552.ctex"
+uid="uid://crs623u5buba7"
+path="res://.godot/imported/tela carregando.png-697a065d4e187c0fcf97378d4d845fa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/screens/Tela ligando.png"
-dest_files=["res://.godot/imported/Tela ligando.png-e87c89aab5dd0b2e65b31aac48795552.ctex"]
+source_file="res://assets/screens/tela carregando.png"
+dest_files=["res://.godot/imported/tela carregando.png-697a065d4e187c0fcf97378d4d845fa3.ctex"]
 
 [params]
 

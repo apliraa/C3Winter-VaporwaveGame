@@ -40,7 +40,7 @@ desktop = NodePath("desktop")
 [node name="AppManager" type="Node2D" parent="." node_paths=PackedStringArray("apps", "arquivos")]
 script = ExtResource("2_log26")
 apps = [NodePath("../MSN"), NodePath("../NAV"), NodePath("../EMAIL"), NodePath("../LIXO")]
-arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL"), NodePath("../PASTA"), NodePath("../IMAGEM")]
+arquivos = [NodePath("../RECIBO"), NodePath("../JORNAL"), NodePath("../IMAGEM")]
 
 [node name="desktop" parent="." instance=ExtResource("2_dylgi")]
 layout_mode = 1

@@ -81,6 +81,7 @@ theme_override_fonts/font = ExtResource("7_33mbo")
 text = "ratos.txt"
 
 [node name="bardosButton2" parent="." instance=ExtResource("5_y2t1h")]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 0
 offset_left = 252.0

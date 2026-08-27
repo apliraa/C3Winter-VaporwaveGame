@@ -1,10 +1,86 @@
-[gd_scene load_steps=6 format=3 uid="uid://b05ff2watqm04"]
+[gd_scene load_steps=10 format=3 uid="uid://b05ff2watqm04"]
 
 [ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_6ybww"]
 [ext_resource type="Script" uid="uid://fq4abedxy1yg" path="res://scripts/TelaInicial.cs" id="2_17ume"]
-[ext_resource type="Texture2D" uid="uid://bni17a8tymve6" path="res://assets/screens/tela ligada (carregando) (1).png" id="3_1exgo"]
+[ext_resource type="Texture2D" uid="uid://v82wklmowtim" path="res://assets/screens/Tela ligando.png" id="3_hgyjh"]
 [ext_resource type="Texture2D" uid="uid://bckfpu6ghu735" path="res://assets/icons/Botão_ligado.png" id="4_1exgo"]
+[ext_resource type="Texture2D" uid="uid://crs623u5buba7" path="res://assets/screens/tela carregando.png" id="4_fkycc"]
 [ext_resource type="PackedScene" uid="uid://dldvh4gp7yfbu" path="res://scenes/music_button.tscn" id="5_1exgo"]
+
+[sub_resource type="Animation" id="Animation_hgyjh"]
+resource_name = "turnOnPC"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarregandoPC:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ligandoPC:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ligarPC"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_fkycc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarregandoPC:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ligandoPC:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_np5he"]
+_data = {
+&"RESET": SubResource("Animation_fkycc"),
+&"turnOnPC": SubResource("Animation_hgyjh")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,6 +90,7 @@ offset_bottom = 40.0
 script = ExtResource("2_17ume")
 
 [node name="MolduraPC" type="TextureRect" parent="."]
+z_index = 10
 layout_mode = 0
 offset_right = 1281.0
 offset_bottom = 720.0
@@ -23,14 +100,20 @@ metadata/_edit_use_anchors_ = true
 [node name="ligandoPC" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 132.9046
+offset_top = 75.0
+offset_right = 1144.0
+offset_bottom = 645.0
+texture = ExtResource("3_hgyjh")
 
 [node name="CarregandoPC" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_1exgo")
+offset_left = 132.9046
+offset_top = 75.0
+offset_right = 1144.0
+offset_bottom = 645.0
+texture = ExtResource("4_fkycc")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -43,7 +126,10 @@ focus_mode = 0
 icon = ExtResource("4_1exgo")
 flat = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="turnOnPC" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_np5he")
+}
 
 [node name="music buttons" type="Node2D" parent="."]
 

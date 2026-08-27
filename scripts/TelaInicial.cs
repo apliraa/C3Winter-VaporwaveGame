@@ -3,13 +3,14 @@ using System;
 
 public partial class TelaInicial : Control
 {
-	private VideoStreamPlayer vsp;
+	private AnimationPlayer turnON;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		vsp =GetNode<VideoStreamPlayer>("VideoStreamPlayer");
-		vsp.Finished += _on_video_stream_player_finished;
+		turnON = GetNode<AnimationPlayer>("turnOnPC");
+		
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,11 +18,11 @@ public partial class TelaInicial : Control
 	{
 	}
 	public void _on_button_pressed(){
-		vsp.Play();
+		turnON.Play("turnOnPC");
 		
 	}
 	
-	public void _on_video_stream_player_finished(){
+	public void ligarPC(){
 		GetTree().ChangeSceneToFile("res://scenes/root.tscn");
 	}
 }
