@@ -1,7 +1,76 @@
-[gd_scene load_steps=3 format=3 uid="uid://trng17ev7puu"]
+[gd_scene load_steps=8 format=3 uid="uid://trng17ev7puu"]
 
 [ext_resource type="Texture2D" uid="uid://l6ua2lmahpgo" path="res://assets/screens/atendendo_V2.png" id="1_a5qso"]
 [ext_resource type="Script" uid="uid://861nrt7nt0k3" path="res://scripts/Cellphone.cs" id="2_a5qso"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5qso"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hu3s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bu8u3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k0te"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtgsu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [node name="celular_chamado" type="TextureRect" node_paths=PackedStringArray("labelDialogue", "campoTexto")]
 offset_right = 305.0
@@ -44,4 +113,35 @@ grow_vertical = 2
 text = "Qual o nome dele?"
 horizontal_alignment = 1
 
+[node name="off" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 346.0
+offset_right = 196.0
+offset_bottom = 434.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_a5qso")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3hu3s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bu8u3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1k0te")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dtgsu")
+flat = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -305.0
+offset_top = -516.33325
+offset_right = -1.0
+offset_bottom = -496.33325
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="off" to="." method="_on_off_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

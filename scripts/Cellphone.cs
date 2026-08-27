@@ -81,4 +81,22 @@ public partial class Cellphone : Control
 
 		labelDialogue.Text = Dialogue[currIndex];
 	}
+
+		public void _on_off_pressed()
+	{
+		currIndex = -1;
+
+		wordsRight.Clear();
+
+		campoTexto.Text = "";
+
+		Hide();
+
+		telaIdle.Show();
+
+	}
+	
+
+	
+
 }

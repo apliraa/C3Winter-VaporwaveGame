@@ -22,7 +22,7 @@ public partial class Celphone2 : Control
 		if ( !isOut){
 			
 			phoneTween.TweenProperty(this, "position:y", PhoneMarker.GlobalPosition.Y, 0.5f   );
-			//GlobalPosition = PhoneMarker.GlobalPosition;
+			
 
 		}
 		else

@@ -1,7 +1,76 @@
-[gd_scene load_steps=3 format=3 uid="uid://pkhi17yw2ksg"]
+[gd_scene load_steps=8 format=3 uid="uid://pkhi17yw2ksg"]
 
 [ext_resource type="Texture2D" uid="uid://dvmfkkqsmc3ga" path="res://assets/screens/Ligação_V2.png" id="1_fngjc"]
 [ext_resource type="Script" uid="uid://darki5spcuu6l" path="res://scripts/Celphone2.cs" id="2_numlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fngjc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_numlc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6qkg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiqyb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc8ds"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [node name="celular_idle" type="TextureRect"]
 offset_left = -3.0
@@ -30,11 +99,16 @@ focus_mode = 0
 
 [node name="call" type="Button" parent="."]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 345.0
-offset_right = 133.0
-offset_bottom = 436.0
+offset_left = 43.0
+offset_top = 346.0
+offset_right = 127.0
+offset_bottom = 434.0
 focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fngjc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_numlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j6qkg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eiqyb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xc8ds")
 flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
