@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw2lnqefk5fdp"]
+[gd_scene load_steps=4 format=3 uid="uid://dw2lnqefk5fdp"]
 
+[ext_resource type="Script" uid="uid://861nrt7nt0k3" path="res://scripts/Cellphone.cs" id="1_6kwur"]
 [ext_resource type="PackedScene" uid="uid://pkhi17yw2ksg" path="res://scenes/celular_idle.tscn" id="1_fdx4p"]
 [ext_resource type="PackedScene" uid="uid://trng17ev7puu" path="res://scenes/celular_chamado.tscn" id="2_4vcnu"]
 
-[node name="Celphone" type="Control"]
+[node name="Celphone" type="Control" node_paths=PackedStringArray("labelLegenda")]
 layout_mode = 3
 anchors_preset = 0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+script = ExtResource("1_6kwur")
+labelLegenda = NodePath("")
 
 [node name="celular_idle" parent="." node_paths=PackedStringArray("PhoneMarker", "telaChamado") instance=ExtResource("1_fdx4p")]
 z_index = 200

@@ -2,10 +2,37 @@
 
 [ext_resource type="Texture2D" uid="uid://e1briprd8oda" path="res://assets/screens/moldura computador (1).png" id="2_6ybww"]
 [ext_resource type="Script" uid="uid://fq4abedxy1yg" path="res://scripts/TelaInicial.cs" id="2_17ume"]
-[ext_resource type="Texture2D" uid="uid://v82wklmowtim" path="res://assets/screens/Tela ligando.png" id="3_hgyjh"]
+[ext_resource type="Texture2D" uid="uid://v82wklmowtim" path="res://assets/screens/tela ligando.png" id="3_hgyjh"]
 [ext_resource type="Texture2D" uid="uid://bckfpu6ghu735" path="res://assets/icons/Botão_ligado.png" id="4_1exgo"]
 [ext_resource type="Texture2D" uid="uid://crs623u5buba7" path="res://assets/screens/tela carregando.png" id="4_fkycc"]
 [ext_resource type="PackedScene" uid="uid://dldvh4gp7yfbu" path="res://scenes/music_button.tscn" id="5_1exgo"]
+
+[sub_resource type="Animation" id="Animation_fkycc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarregandoPC:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ligandoPC:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_hgyjh"]
 resource_name = "turnOnPC"
@@ -47,33 +74,6 @@ tracks/2/keys = {
 "args": [],
 "method": &"ligarPC"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_fkycc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CarregandoPC:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ligandoPC:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_np5he"]

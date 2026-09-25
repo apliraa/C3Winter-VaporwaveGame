@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8rabiej068uh"]
+[gd_scene load_steps=3 format=3 uid="uid://cqls7wrgarxe5"]
 
 [ext_resource type="Script" uid="uid://cftg25jpsxgt7" path="res://scripts/Camera2d.cs" id="1_jtxfu"]
 [ext_resource type="Script" uid="uid://b1lwebmd1ainp" path="res://scripts/Window.cs" id="2_wb1d8"]
@@ -40,8 +40,8 @@ offset_top = 1.538452
 offset_right = 196.0
 offset_bottom = 51.230774
 
-[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="close_requested" from="Window" to="." method="OnWindowCloseRequested"]
-[connection signal="text_submitted" from="Window/LineEdit" to="." method="OnLineEditTextSubmitted"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="text_submitted" from="Window/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="Window/LineEdit" to="." method="OnLineEditTextSubmitted"]
 [connection signal="text_submitted" from="Window/LineEdit" to="Window" method="_on_line_edit_text_submitted"]
